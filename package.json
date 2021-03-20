@@ -1,8 +1,8 @@
 {
-  "homepage": "https://qvinh123.github.io/react-tix",
   "name": "phim",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://qvinh123.github.io/react-movie",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
@@ -12,6 +12,7 @@
     "axios": "^0.21.1",
     "date-format": "^3.0.0",
     "formik": "^2.2.6",
+    "gh-pages": "^3.1.0",
     "node-sass": "^4.14.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -56,7 +57,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0",
     "sass": "^1.32.8"
   }
 }
