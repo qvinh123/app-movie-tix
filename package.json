@@ -1,6 +1,7 @@
 {
   "name": "phim",
   "version": "0.1.0",
+  "homepage": "https://qvinh123.github.io/tixxx/",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.3",
