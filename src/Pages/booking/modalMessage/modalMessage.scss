@@ -1,0 +1,46 @@
+.modalBooking {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, .85);
+  .modalMessage {
+    position: fixed;
+    top: 40%;
+    transform: translateY(-50%);
+    display: block;
+    z-index: 99999;
+    width: 100%;
+    @media screen and (max-width:576px){
+      padding: 0 15px;
+    }
+    .modalMessage-content {
+      width: 685px;
+      margin: auto;
+      position: relative;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 6px;
+      outline: 0;
+      @media screen and (max-width:768px){
+        width: unset;
+      }
+      .seat-error-content {
+        font-size: 16px;
+        text-align: center;
+        background: #fff;
+        color: rgba(3, 3, 3, 0.75);
+        padding: 40px;
+        border-radius: 6px;
+        @media screen and (max-width:768px){
+          padding: 30px;
+        }
+        a{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

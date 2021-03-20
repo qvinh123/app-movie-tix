@@ -1,0 +1,242 @@
+.userInfo {
+  background-image: url("../../assets/image/pexels-ricardo-ortiz-6447217.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  @media screen and (max-width:768px){
+    height: 100%;
+  }
+  h2 {
+    color: $color-primary;
+  }
+  .overlay_userInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    // @media screen and (max-width:768px){
+    //   height: 100%;
+    // }
+  }
+  .sideBar {
+    margin-top: 150px;
+    @media screen and (max-width:768px){
+      margin-top: 105px;
+    }
+    .avatar_name_user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .uploadfile {
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        border-radius: 50%;
+        z-index: 10;
+        i {
+          position: absolute;
+          z-index: 11;
+          top: 50%;
+          left: 45%;
+          opacity: 0;
+          transition: 0.5s all;
+          color: white;
+        }
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.5);
+          i {
+            opacity: 1;
+          }
+        }
+      }
+      .avatar {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        transition: 0.5s all;
+      }
+      .avatar_show {
+        position: relative;
+        top: -150px;
+      }
+      #img {
+        display: none;
+      }
+    }
+    .nav {
+      display: block !important;
+      text-align: center;
+      position: relative;
+      bottom: 15%;
+      @media screen and (min-width:768px) and (max-width:991px){
+        width: 50%;
+        margin: 0 auto;
+      }
+      p {
+        font-size: 26px;
+        margin-top: 10px;
+        border-bottom: 1px solid $color-gray-2;
+        padding-bottom: 10px;
+        color: $color-primary;
+      }
+      .nav-link {
+        color: white;
+      }
+      .active {
+        background-color: #28a745;
+      }
+    }
+  }
+  .main {
+    margin-top: 130px;
+    height: 100%;
+    @media screen and (max-width:768px){
+      margin-top: 0;
+      height: 100%;
+    }
+    .view {
+      height: 100%;
+      padding: 30px 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 25px;
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        &:before {
+          position: absolute;
+          content: "";
+          height: 16px;
+          width: 16px;
+          left: 5px;
+          bottom: 5px;
+          background-color: white;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+        }
+      }
+      input {
+        &:checked {
+          + {
+            .slider {
+              background-color: #28a745;
+              &:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+              }
+            }
+          }
+        }
+        &:focus {
+          + {
+            .slider {
+              box-shadow: 0 0 1px #28a745;
+            }
+          }
+        }
+      }
+      .slider.round {
+        border-radius: 34px;
+        &:before {
+          border-radius: 50%;
+        }
+      }
+
+      .infoUser_content_form {
+        width: 60%;
+        margin-top: 35px;
+        @media screen and (max-width:576px){
+          width: 100%;
+        }
+        .form-group {
+          height: 75px;
+          label {
+            display: flex;
+            align-items: baseline;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            @media screen and (max-width:768px){
+              justify-content: unset;
+            }
+          }
+          .form-control {
+            border: none;
+            border-bottom: 2px solid #333;
+            text-align: center;
+            color: #333;
+            font-size: 16px;
+            font-weight: 600;
+            &:focus {
+              box-shadow: none;
+            }
+            &:disabled {
+              cursor: no-drop;
+            }
+          }
+        }
+        .btn_change{
+          margin-top: 30px;
+        }
+      }
+    }
+    .change__password_form {
+      width: 40%;
+      margin-top: 35px;
+      @media screen and (max-width:576px){
+        width: 90%;
+      }
+      .form-group {
+        margin-bottom: 0;
+        .form-control {
+          &:focus {
+            box-shadow: none;
+          }
+        }
+        label {
+          position: relative;
+          top: -33px;
+          left: 90%;
+        }
+      }
+    }
+  }
+
+  .history_booking {
+    h2{
+      margin-bottom: 20px;
+    }
+    .active {
+      background-color: #17a2b8;
+      border: #17a2b8;
+      .page-link {
+        background-color: #17a2b8;
+        border: #17a2b8;
+      }
+    }
+  }
+}

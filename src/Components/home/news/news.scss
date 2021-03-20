@@ -1,0 +1,128 @@
+#news {
+    // @include maxWidth;
+    background-image: url("https://tix.vn/app/assets/img/icons/back-news.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 100px;
+    @media screen and (max-width:768px){
+      padding-top: 50px; 
+    }
+    .nav {
+      .nav-item {
+        a {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          @include text($color-black, $fs-3, $fw-2);
+          transition: .2s ease-out;
+          &:hover {
+            transform: scale(1);
+            &:not(.active) {
+              transform: scale(1.3);
+            }
+          }
+        }
+        .active {
+          @include text($color-primary, $fs-4 - 1, $fw-2);
+        }
+      }
+    }
+  
+    .tab-content {
+      padding-top: $pd-1;
+      .tab-pane{
+        button{
+          @include text($color-gray-2,$fs-2,$fw-1);
+          border: 1px solid #949494;
+          border-radius: 4px;
+          text-align: center;
+          background: transparent;
+          padding: 7px 25px;
+          transition: all .2s;
+          margin: $mg-3 + 5 auto 50px;
+          display: block;
+          outline: none;
+        }
+      }
+      .new_item {
+        margin-top: 30px;
+        ul{
+          padding-left: 0;
+          li{
+            margin-bottom: 15px !important;
+          }
+        }
+        a{
+          text-decoration: none;
+          img {
+            width: 100%;
+            border-radius: 4px;
+          }
+        }
+        .newTitle {
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: 40px;
+          line-height: 20px;
+          @include text($color-black, $fs-2 + 2, $fw-2);
+          transition: 0.2s all;
+          margin-bottom: 5px;
+          &:hover{
+              color: $color-primary;
+          }
+        }
+        
+        .newsDescription{
+            @extend .newTitle;
+            height: 57px;
+            @include text($color-button,$fs-1,$fw-1);
+            text-align: justify;
+            margin-bottom: $mg-2 - 5;
+            &:hover{
+                color: initial;
+            }
+        }
+  
+        .iconFacebook{
+            .wrap-icon{
+                img{
+                    width: 18px;
+                    height: auto;
+                    margin-right: $mg-1 + 2;
+                }
+                span{
+                  @include text($color-gray-3,$fs-1 - 1,$fw-1)
+                }
+            }
+            .like{
+              margin-right: $mg-2;
+            }
+        }
+        ul{
+          list-style: none;
+          margin: 0;
+          li{
+            margin-bottom: $mg-1 + 2;
+            a{
+              display: flex;
+              text-decoration: none;
+              img{
+                width: 50px;
+                height: 50px;
+                border-radius: 4px;
+                margin-right: $mg-1 + 2;
+              }
+              .newTitle{
+                opacity: .7;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+  }
+  

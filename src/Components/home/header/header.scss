@@ -1,0 +1,205 @@
+header {
+  position: fixed;
+  width: 100%;
+  max-height: 65px;
+  background-color: $color-white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  top: -2px;
+  z-index: 10;
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 200vh;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 8;
+  }
+  .navbar {
+    max-height: 65px !important;
+    @media screen and (max-width: 576px) {
+      padding: 0 !important;
+    }
+    .navbar-brand {
+      padding-left: $pd-2;
+      width: 65px;
+    }
+    .navbar-toggler {
+      padding-right: $pd-2;
+      outline: none;
+      position: relative;
+      z-index: 101;
+      img {
+        width: 25px;
+      }
+    }
+
+    .navbar-collapse {
+      justify-content: flex-end;
+      @media screen and (max-width: 576px) {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        justify-content: flex-start;
+
+        &.active {
+          background: #fff;
+          right: 0;
+          opacity: 1;
+          transition: all 0.5s ease;
+          z-index: 100;
+          align-items: flex-start;
+        }
+      }
+      .navbar-nav {
+        @media screen and(min-width:992px) {
+          margin-right: 300px;
+        }
+        .nav-item {
+          margin-right: $mg-2;
+          .nav-link {
+            @include text($color-black, $fs-2, $fw-1);
+            text-decoration: none;
+            &:hover {
+              color: $color-primary;
+              @media screen and (max-width: 576px) {
+                &:hover {
+                  color: $color-black;
+                }
+              }
+            }
+            @media screen and (max-width: 576px) {
+              padding: 20px;
+              font-size: $fs-3 - 2;
+            }
+          }
+        }
+      }
+    }
+
+    .navbar_info {
+      position: relative;
+      @media screen and (max-width: 576px) {
+        order: 1 !important;
+      }
+      .navbar_info-account {
+        padding-right: $pd-1;
+        border-right: 1px solid $color-white;
+        border-right-color: $color-border;
+        @media screen and (max-width: 576px) {
+          border: none;
+          padding: $pd-3;
+        }
+        @include button;
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin-right: $mg-1 + 2;
+        }
+        span {
+          @include text($color-gray, $fs-1, $fw-1);
+          position: relative;
+          @media screen and (max-width: 576px) {
+            @include text($color-black, $fs-2, $fw-1);
+          }
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+      .logout {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: 170px;
+        text-align: center;
+        color: #fff;
+        display: none;
+        transition: 0.3s all;
+        background-color: #959595;
+        border-radius: 4px;
+        padding: 5px 0;
+        ul {
+          padding-left: 0;
+          margin-bottom: 0;
+          li {
+            margin: 5px 0;
+            list-style: none;
+            &:hover {
+              background-color: #888;
+            }
+          }
+        }
+      }
+      &:hover {
+        .logout {
+          display: block;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        .logout {
+          position: relative;
+          display: block;
+          background-color: transparent;
+          top: 335px;
+          order: 4 !important;
+          text-align: left;
+          left: 12px;
+          ul{
+            position: absolute;
+            li{
+              padding: 20px 6px;
+              margin: 0;
+              font-size: 18px;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+    .navbar_info-location {
+      padding-left: $pd-1;
+      img {
+        @media screen and (max-width: 576px) {
+          display: none;
+        }
+      }
+      button {
+        @include text($color-gray, $fs-1, $fw-1);
+        border: none;
+        background-color: transparent;
+        outline: none;
+        &::after {
+          @include arrow;
+          vertical-align: 0;
+          margin-left: $mg-2;
+        }
+        @media screen and (max-width: 576px) {
+          @include text($color-black, $fs-3 - 2, $fw-1);
+          padding-top: $pd-3;
+          padding-bottom: $pd-3;
+          &::after {
+            content: "";
+          }
+        }
+      }
+      .dropdown {
+        .dropdown-menu {
+          left: -30px;
+          top: 40px;
+          a {
+            @include text($color-black-1, $fs-1, $fw-1);
+          }
+        }
+      }
+    }
+  }
+}

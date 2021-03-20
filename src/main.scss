@@ -1,0 +1,64 @@
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.swal2-content{
+  font-size: 16px !important;
+}
+.swal2-popup{
+  padding: .7em 1.25em 0 !important;
+  width: 480px !important;
+  bottom: 10% !important;
+}
+.swal2-image{
+  position: relative;
+  left: 5%;
+}
+.swal2-actions{
+  border-top: 1.2px solid rgba(0,0,0,.1);
+  border-radius: 0 0 6px 6px !important;
+  margin: 1em auto 0 !important;
+  .swal2-confirm {
+    font-size: 16px !important;
+    cursor: pointer !important;
+    padding: 7px 25px !important;
+    color: #fb4226 !important;
+    background-color: transparent !important;
+    border: 1.2px solid #fb4226 !important;
+    border-radius: 20px !important;
+    margin: 15px 0 !important;
+    &:hover{
+      background-color: #fb4226 !important;
+      color: white !important
+    }
+    &:focus{
+      outline: none !important;
+      box-shadow: none !important
+    }
+  }
+}
+
+
+
+@import "./styles/mixin";
+@import "./styles/variable";
+@import "./Components/home/header/header";
+@import "./Components/home/carousel/carousel";
+@import "./Components/home/movie/movie";
+@import "./Components/home/cinema/cinema";
+@import "./Components/home/apps/apps";
+@import "./Components/home/news/news";
+@import "./Components/home/footer/footer";
+@import "./Pages/booking/booking";
+@import "./Pages/detail/detail";
+@import "./Pages/signIn/signIn";
+@import "./Pages/signUp/signUp";
+@import "./Pages/dashboard/dashboard";
+@import "./Pages/detailCinema/detailCinemas";
+@import "./Components/loading/loading";
+@import "./Pages/booking/modalMessage/modalMessage";
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
+@import "./Pages/InfoUser/infoUser";
+

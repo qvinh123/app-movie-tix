@@ -1,0 +1,72 @@
+#app {
+  background: url("https://tix.vn/app/assets/img/icons/backapp.jpg");
+  padding: 120px 0 80px;
+  background-size: contain;
+  margin-top: 100px;
+  @media screen and (max-width:768px){
+    margin-top: 50px;
+  }
+  .app_list {
+    @media screen and (min-width:992px) {
+      @include maxWidth;
+    }
+    
+    .app_info {
+      padding-top: 60px;
+      @media screen and (max-width:768px){
+        text-align: center;
+      }
+      .text {
+        @include text($color-white, $fs-5, $fw-3);
+        letter-spacing: 1px;
+      }
+      .textSmall {
+        @include text($color-white, $fs-1 + 3, $fw-2);
+      }
+      .dowload {
+        background-color: #fb4226;
+        padding: 10px 20px;
+        @include text($color-white, $fs-1 + 3, $fw-3);
+        border: none;
+        border-radius: 4px;
+        margin-top: $mg-1 + 2;
+      }
+      .textUnder {
+        margin-top: $mg-2;
+        @include text($color-white, $fs-2, $fw-1);
+        a {
+          color: $color-white;
+          border-bottom: 1px solid $color-white;
+        }
+      }
+    }
+    .app_img {
+      position: relative;
+      padding: 0;
+      .img-res {
+        padding: 0 28%;
+        width: 100%;
+      }
+      .owl-app {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5% 29.3% 0 29.3%;
+        .slick-list {
+          border-top-right-radius: 20px;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 30px;
+          border-bottom-right-radius: 30px;
+          top: 1px;
+          img {
+            width: 100%;
+          }
+        }
+        .slick-arrow {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

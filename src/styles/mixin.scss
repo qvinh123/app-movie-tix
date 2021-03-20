@@ -1,0 +1,66 @@
+
+@mixin maxWidth {
+    width: 940px;
+    margin: 0 auto;
+  }
+  @mixin text($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  @mixin button {
+    outline: none;
+    background-color: transparent;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+    border-right: 1px solid $color-white;
+    border-right-color: $color-border;
+  }
+  
+  @mixin arrow {
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    border: none;
+    color: $color-gray;
+  }
+  
+  @mixin type($bg) {
+      font-size: 14px;
+      background-color: $bg;
+      border-radius: 4px;
+      padding: 0 5px;
+      color: #fff;
+      min-width: 33px;
+      text-align: center;
+      display: inline-block;
+      margin-right: $mg-1 - 1;
+  }
+  
+  
+  @mixin borderBottom {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: calc(100% - 40px);
+      transform: translateX(-50%);
+      border-bottom: 1px solid #fff;
+      border-color: rgba(238, 238, 238, 0.88);
+  }
+
+  @mixin animation($value) {
+    animation: $value;
+    -webkit-animation: $value;
+  }
+
+  @mixin transform($value) {
+    transform: $value;
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+  }

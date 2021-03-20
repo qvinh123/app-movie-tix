@@ -1,0 +1,3 @@
+export const GET_CINEMA = "GET_CINEMA"
+export const GET_SHOW_TIMES_CINEMA = "GET_SHOW_TIMES_CINEMA"
+export const ADD_CALENDAR = "ADD_CALENDAR"

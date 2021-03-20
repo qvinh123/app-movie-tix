@@ -1,0 +1,83 @@
+.styleGradientCinema {
+  background: linear-gradient(to top, #fff, transparent 100%);
+}
+
+.cinemaSystem {
+  position: relative;
+  border: 1px solid $color-border-2;
+  .cinemas {
+    overflow-x: hidden;
+    @media screen and (max-width: 576px) {
+      overflow-x: scroll;
+      white-space: nowrap;
+      height: unset;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #999;
+        border-radius: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: rgb(54, 56, 58);
+      }
+      a {
+        display: inline-block;
+        color: white;
+        padding: 10px;
+      }
+    }
+    .cinema_item {
+      padding: $pd-3 - 5 $pd-2 + 5 $pd-2 + 20 $pd-3;
+      position: relative;
+      opacity: 0.5;
+      transition: 0.2s all;
+      @media screen and (max-width: 768px) {
+        padding: 15px 0;
+      }
+      img {
+        width: 55px;
+      }
+      .cinema_info {
+        margin-left: $mg-1;
+        overflow: hidden;
+        h4 {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          @include text($color-green-2, $fs-2, $fw-2);
+          margin: 0;
+          span {
+            @include text($color-black, $fs-2, $fw-2);
+          }
+        }
+        p {
+          @include text($color-gray-2, $fs-1 - 1, $fw-1);
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: -webkit-box;
+          overflow: hidden;
+        }
+        .a {
+          @include text($color-primary, $fs-1 - 1, $fw-1);
+        }
+      }
+      // @media screen and (min-width: 992px) {
+      //   &::after {
+      //     @include borderBottom;
+      //   }
+      // }
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

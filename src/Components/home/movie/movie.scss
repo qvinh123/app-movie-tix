@@ -1,0 +1,248 @@
+#homeMovies {
+  @media screen and (min-width: 992px) {
+    margin-top: 40px;
+  }
+  .slick-arrow{
+    top: 46% !important;
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .slick-prev{
+    left: 8px !important;
+    @media screen and (min-width: 992px) {
+      left: -30px !important;
+    }
+    &::before{
+      content:"\f053";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color:$color-gray-2;
+      font-size: 40px;
+    }
+  }
+  .slick-next{
+    right: 8px !important;
+    @media screen and (min-width: 992px) {
+      right: -30px !important;
+    }
+    &::before{
+      content:"\f054";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color:$color-gray-2;
+      font-size: 40px;
+    }
+  }
+
+  .movies_list {
+    @media screen and (min-width: 992px) {
+      @include maxWidth;
+    }
+    @media screen and (max-width: 576px) {
+      padding-top: 70px;
+    }
+    padding-top: 45px;
+    .movies_heading {
+      ul {
+        margin-bottom: $mg-3;
+        @media screen and (max-width: 576px) {
+          margin-bottom: $mg-2;
+        }
+        li {
+          a {
+            background-color: transparent;
+            @include text($color-black, $fs-3, $fw-2);
+            transition: 0.2s ease-in-out;
+            &:hover {
+              transform: scale(1);
+              &:not(.active) {
+                transform: scale(1.2);
+              }
+            }
+          }
+          .active {
+            @include text($color-primary, $fs-4, $fw-2);
+          }
+        }
+      }
+    }
+
+    .movies_detail {
+      position: relative;
+      @media screen and (min-width: 992px) {
+        @include maxWidth;
+      }
+      .film {
+        margin-bottom: 50px;
+        position: relative;
+        .film_img {
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 100%;
+          &:hover {
+            .bg-overlay {
+              background: linear-gradient(to top, #000, transparent 100%);
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+            }
+            .play {
+              visibility: visible;
+            }
+          }
+          a {
+            img {
+              border-radius: 5px;
+              width: 100%;
+            }
+            .sneakShow {
+              @include text($color-white, $fs-1, $fw-1);
+              position: absolute;
+              bottom: 10px;
+              right: 10px;
+              background: #fb4226;
+              padding: 4px 8px;
+              border-radius: 6px;
+              box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.3);
+            }
+          }
+          .play {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            visibility: hidden;
+            a {
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+          }
+          .film-label {
+            position: absolute;
+            max-width: 150px;
+            top: -30px;
+            left: -15px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        .review {
+          background-color: rgba(12, 27, 54, 0.8);
+          border: 1px solid #1f2e46;
+          border-radius: 4px;
+          padding: 2px 2px 5px;
+          position: absolute;
+          top: 12px;
+          right: 10px;
+          width: 54px;
+          @include text($color-white, $fs-2 + 2, $fw-1);
+          p {
+            margin-bottom: 0;
+            text-align: center;
+            transform: scaleY(1.2);
+            font-weight: $fw-2;
+          }
+          .star {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            img {
+              max-width: 8px;
+            }
+          }
+        }
+        .film_info {
+          position: relative;
+          margin-top: $mg-1 + 2;
+          .name-film {
+            max-height: 42px;
+            height: 42px;
+            line-height: 22px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            @include text($color-black, $fs-2 + 1, $fw-2);
+            .ageType {
+              @include type($color-primary);
+            }
+            .ageType-general {
+              @include type($color-green);
+            }
+          }
+          .minutes-film {
+            p {
+              @include text($color-button, $fs-1, $fw-1);
+              margin-bottom: $mg-2;
+              margin-top: $mg-1;
+            }
+          }
+          .buyNow {
+            visibility: hidden;
+            button {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              border-radius: 4px;
+              @include text($color-white, $fs-2 + 3, $fw-2);
+              padding: $pd-0;
+              text-align: center;
+              background: linear-gradient(
+                to left,
+                $color-primary,
+                #ce3017 100%
+              );
+              outline: none;
+              border: none;
+              text-transform: uppercase;
+            }
+          }
+        }
+        &:hover {
+          
+          .film_info {
+            visibility: hidden;
+          }
+          .buyNow {
+            visibility: visible;
+          }
+        }
+      }
+
+      #sapchieu {
+        .film {
+          &:hover {
+            .film_info {
+              visibility: visible;
+            }
+          }
+          .film_img {
+            a {
+              .publishDate {
+                @include text($color-white, $fs-2 + 2, $fw-2);
+                background-color: rgba(12, 27, 54, 0.8);
+                border: 1px solid #1f2e46;
+                border-radius: 4px;
+                padding: 2px;
+                position: absolute;
+                bottom: 12px;
+                right: 12px;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

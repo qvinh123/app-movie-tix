@@ -1,0 +1,2 @@
+export const GET_LIST_MOVIE_ADMIN = "GET_LIST_MOVIE_ADMIN"
+export const GET_CODE_MOVIE = "GET_CODE_MOVIE"

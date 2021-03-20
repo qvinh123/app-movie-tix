@@ -1,0 +1,342 @@
+#stepcheckout {
+  position: fixed;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  top: -1px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  @media screen and (max-width: 768px) {
+    height: 70px;
+  }
+  .leftstep {
+    width: 95%;
+    margin: 0 auto;
+    @media screen and (max-width: 768px) {
+      h4 {
+        font-size: 1rem;
+      }
+    }
+  }
+  .rightstep {
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+    @media screen and (max-width: 768px) {
+      left: 85%;
+    }
+    img {
+      width: 30px;
+      border-radius: 50%;
+    }
+  }
+}
+#seatcheckout2 {
+  margin-left: 2.3%;
+  margin-top: 80px;
+  float: left;
+  padding-top: 8px;
+  width: 69.7%;
+  @media screen and (max-width: 768px) {
+    margin-left: unset;
+    padding-top: 0;
+  }
+  #seatv2 {
+    max-width: 1000px;
+    .topContent {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and (max-width:768px){
+        margin: 10px 0 20px;
+      }
+      .lefttitle {
+        p {
+          margin-bottom: 0;
+        }
+        .logocinema {
+          width: 5.5%;
+          margin-right: 13px;
+          float: left;
+          img {
+            width: 100%;
+          }
+        }
+        .contentcinema {
+          margin-left: 30px;
+          .hour {
+            font-size: 14px;
+            color: #9b9b9b;
+            font-weight: 400;
+          }
+        }
+      }
+      .righttitle {
+        margin-top: 10px;
+        width: 75px;
+        p {
+          margin-bottom: 0;
+        }
+        .info1 {
+          font-size: 10px;
+          color: #9b9b9b;
+          text-align: center;
+        }
+        .second {
+          color: #fb4226;
+          font-size: 30px;
+        }
+      }
+    }
+    .seatmap {
+      margin-top: 10px;
+      .panzoom {
+        margin: auto;
+        text-align: center;
+        .screen{
+          .namescreen {
+            img {
+              width: 100%;
+            }
+          }
+          @media screen and(max-width:576px){
+            margin-bottom: 40px;
+          }
+        }    
+
+        .listseat {
+          margin-top: -40px;
+
+          .container-seat {
+            text-align: left;
+            margin: 0 auto;
+            width: 90%;
+            .rowseat {
+              line-height: 1.1em;
+              @media screen and (max-width: 768px) {
+                height: 270px;
+                overflow-y: scroll;
+                overflow-x: auto;
+                &::-webkit-scrollbar {
+                  width: 10px;
+                }
+
+                &::-webkit-scrollbar-track {
+                  box-shadow: inset 0 0 5px grey;
+                  border-radius: 5px;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                  background: #999;
+                  border-radius: 5px;
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                  background: rgb(54, 56, 58);
+                }
+              }
+              button {
+                margin-right: 10px;
+                width: 40px;
+                height: 35px;
+                border: none;
+                margin-top: 10px;
+                outline: none;
+                border-radius: 5px;
+                @media screen and (max-width: 768px) {
+                  width: 37px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .typeseats {
+      text-align: center;
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+      @media screen and(max-width:576px){
+        margin-top: 20px;
+        padding-bottom: 15px;
+        font-size: 14px;
+        justify-content: space-between;
+      }
+      .colorseat {
+        margin: 0 20px;
+        @media screen and (max-width: 576px) {
+          margin: 0;
+        }
+        .nameseat {
+          margin-bottom: 5px;
+        }
+        button {
+          width: 20px;
+          height: 20px;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+.rightcheckout {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  width: 440px;
+  height: 100%;
+  z-index: 1000;
+  @media screen and (max-width: 768px) {
+    position: relative;
+  }
+  .contentfullright {
+    padding-left: 40px;
+    padding-right: 40px;
+    @media screen and(max-width:768px) {
+      margin-bottom: 60px;
+    }
+    .total {
+      position: relative;
+      border-bottom: 1px dashed #e9e9e9;
+      height: 80px;
+      margin: 15px 0;
+      text-align: center;
+      font-size: 36px;
+      color: #44c020;
+      font-weight: 500;
+      @media screen and (max-width: 768px) {
+        height: 50px;
+      }
+    }
+    .filmname {
+      border-bottom: 1px dashed #e9e9e9;
+      padding-bottom: 12.5px;
+      .ageType {
+        @include type($color-primary);
+      }
+      .contentcinema {
+        margin-top: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        .address {
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+  .chair {
+    border-bottom: 1px dashed #e9e9e9;
+    padding-bottom: 12.5px;
+    padding-top: 12.5px;
+    margin-bottom: 12.5px;
+    display: flex;
+    justify-content: space-between;
+    .info {
+      color: #fb4226;
+      font-size: 14px;
+      width: 70%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .totalchair {
+      color: #44c020;
+    }
+  }
+  .info_booking {
+    border-bottom: 1px dashed #e9e9e9;
+    padding-bottom: 12.5px;
+    padding-top: 12.5px;
+    margin-bottom: 12.5px;
+    label {
+      font-size: 12px;
+      color: #1e90ff;
+    }
+    .inputInfo {
+      display: block;
+      border: none;
+      width: calc(100% - 16px);
+      padding-right: 5px;
+      font-size: 14px;
+    }
+    }
+    .booking_notice {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 4%;
+      margin-right: 4px;
+      background-color: #fff;
+      text-align: center;
+      margin-top: 60px;
+      @media screen and (max-width:768px){
+        margin-top: 30px;
+        padding-bottom: 10%;
+      }
+      img {
+        margin-right: 8px;
+        width: 16px;
+        height: 16px;
+      }
+      .notice__title {
+        font-size: 14px;
+        color: $color-button;
+        span{
+          color: #f79320;
+          cursor: pointer;
+        }
+      }
+  }
+  .buyticket {
+    width: 100%;
+    outline: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 15px;
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #e9e9e9;
+    background-image: linear-gradient(223deg, #b4ec51 0, #429321 100%);
+    border: none;
+    // @media screen and(max-width:768px){
+    //   position: fixed;
+    //   z-index: 1001;
+    // }
+  }
+
+  .notBuyticket {
+    width: 100%;
+    outline: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 15px;
+    height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #e9e9e9;
+    background-color: #afafaf;
+    cursor: not-allowed;
+    border: none;
+    // @media screen and(max-width:768px){
+    //   position: fixed;
+    //   z-index: 1001;
+    // }
+  }
+}

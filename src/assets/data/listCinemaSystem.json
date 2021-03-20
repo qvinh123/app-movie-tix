@@ -1,0 +1,307 @@
+[
+    {
+      "maRap": "BHDStar",
+      "danhSachCumRap": [
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-vincom-3-2-16105958137807.png",
+          "maCumRap": "bhd-star-cineplex-3-2",
+          "tenCumRap": "BHD Star Vincom 3/2",
+          "diaChi": "L5-Vincom 3/2, 3C Đường 3/2, Q.10",
+          "danhGia": "8"
+  
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-bitexco-16105952220224.png",
+          "maCumRap": "bhd-star-cineplex-bitexco",
+          "tenCumRap": "BHD Star Bitexco",
+          "diaChi": "L3-Bitexco Icon 68, 2 Hải Triều, Q.1",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-vincom-le-van-viet-16105962163646.png",
+          "maCumRap": "bhd-star-cineplex-vincom-le-van-viet",
+          "tenCumRap": "BHD Star Vincom Lê Văn Việt",
+          "diaChi": "L4-Vincom Plaza, 50 Lê Văn Việt, Q.9",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-pham-hung-16105959366367.png",
+          "maCumRap": "bhd-star-cineplex-pham-hung",
+          "tenCumRap": "BHD Star ‎Phạm Hùng",
+          "diaChi": "L4-Satra Phạm Hùng, C6/27 Phạm Hùng, Bình Chánh",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-vincom-quang-trung-16105960734310.png",
+          "maCumRap": "bhd-star-cineplex-vincom-quang-trung",
+          "tenCumRap": "BHD Star Vincom Quang Trung",
+          "diaChi": "B1-Vincom QT, 190 Quang Trung, Gò Vấp",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2021/01/bhd-star-vincom-thao-dien-16105956028741.png",
+          "maCumRap": "bhd-star-cineplex-vincom-thao-dien",
+          "tenCumRap": "BHD Star Vincom Thảo Điền",
+          "diaChi": "L5-Megamall, 159 XL Hà Nội, Q.2",
+          "danhGia": "8"
+        }
+      ]
+    },
+    {
+      "maRap": "CineStar",
+      "danhSachCumRap": [
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2017/08/cinestar-hai-ba-trung-15023340165892.jpg",
+          "maCumRap": "cns-hai-ba-trung",
+          "tenCumRap": "CineStar Hai Bà Trưng",
+          "diaChi": "135 Hai Bà Trưng, Bến Nghé, Q.1",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2018/09/cinestar-quoc-thanh-15379637043929.jpg",
+          "maCumRap": "cns-quoc-thanh",
+          "tenCumRap": "CineStar Quốc Thanh",
+          "diaChi": "271 Nguyễn Trãi, Q.1",
+          "danhGia": "8"
+        }
+      ]
+    },
+    {
+      "maRap": "LotteCinima",
+      "danhSachCumRap": [
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2017/07/lotte-cinema-cong-hoa-14999134292376.jpg",
+          "maCumRap": "lotte-cong-hoa",
+          "tenCumRap": "Lotte Cinema Cộng Hòa",
+          "diaChi": "L4-Pico Plaza, 20 Cộng Hòa, Tân Bình",
+          "danhGia": "7"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2017/07/lotte-cinema-nam-sai-gon-14999134052848.jpg",
+          "maCumRap": "lotte-nam-sai-gon",
+          "tenCumRap": "Lotte Cinema Nam Sài Gòn",
+          "diaChi": "L3-Lotte Mart NSG, 469 Nguyễn Hữu Thọ, Q.7",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2018/10/lotte-cinema-cantavil-15383866510260.jpg",
+          "maCumRap": "lotte-cantavil",
+          "tenCumRap": "Lotte Cinema Cantavil",
+          "diaChi": "L7-Cantavil Premier, Xa Lộ Hà Nội, Q.2",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2018/10/lotte-cinema-phu-tho-15383865322515.jpg",
+          "maCumRap": "lotte-phu-tho",
+          "tenCumRap": "Lotte Cinema Phú Thọ",
+          "diaChi": "L4-Lotte Mart Phú Thọ, Q.11",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2017/07/lotte-cinema-go-vap-14999139760554.jpg",
+          "maCumRap": "lotte-go-vap",
+          "tenCumRap": "Lotte Cinema Gò Vấp",
+          "diaChi": "L3-Lotte Mart, 242 Nguyễn Văn Lượng, Gò Vấp",
+          "danhGia": "7"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2018/10/lotte-cinema-thu-duc-15383864347748.jpg",
+          "maCumRap": "lotte-thu-duc",
+          "tenCumRap": "Lotte Cinema Thủ Đức",
+          "diaChi": "L2-Joy Citipoint, KCX Linh Trung, Thủ Đức",
+          "danhGia": "8"
+        }
+      ]
+    },
+    {
+      "maRap": "MegaGS",
+      "danhSachCumRap": [
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2018/09/mega-gs-cao-thang-15380166542810.jpg",
+          "maCumRap": "megags-cao-thang",
+          "tenCumRap": "Mega GS Cao Thắng",
+          "diaChi": "19 Cao Thắng, Q.3",
+          "danhGia": "8"
+        }
+      ]
+    },
+    {
+      "maRap": "Galaxy",
+      "danhSachCumRap": [
+        {
+          "hinhAnh": "https://galaxycine.vn/media/2019/12/11/galaxy46_1576054852883.jpg",
+          "maCumRap": "glx-huynh-tan-phat",
+          "tenCumRap": "Galaxy Huỳnh Tấn Phát",
+          "diaChi": "1362 Huỳnh Tấn Phát, Phú Mỹ, Quận 7",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://kenhhomestay.com/wp-content/uploads/2019/10/rap-chieu-phim-galaxy-nguyen-du-1.jpg",
+          "maCumRap": "glx-nguyen-du\r\n",
+          "tenCumRap": "Galaxy Nguyễn Du",
+          "diaChi": "116 Nguyễn Du, Phường Bến Thành, Quận 1",
+          "danhGia": "7"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2018/09/galaxy-nguyen-van-qua-15381053059439.jpg",
+          "maCumRap": "glx-nguyen-van-qua",
+          "tenCumRap": " Galaxy Nguyễn Văn Quá",
+          "diaChi": "119B Đường Nguyễn Văn Quá, Đông Hưng Thuận, Quận 12",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://farm8.staticflickr.com/7707/17857092338_a6427e3ef6_o.jpg",
+          "maCumRap": "glx-quang-trung",
+          "tenCumRap": "Galaxy Quang Trung",
+          "diaChi": "304A Quang Trung, Phường 11, Gò Vấp",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://rapchieuphim.com/photos/cinema/galaxy-tan-binh-main-image.jpg",
+          "maCumRap": "glx-tan-binh",
+          "tenCumRap": "Galaxy Tân Bình",
+          "diaChi": "246 Đường Nguyễn Hồng Đào, Phường 13, Tân Bình",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://www.megavina.com/vi/upload/galaxy-cinema.jpg_megavina_69z3m9Jf.jpg",
+          "maCumRap": "glx-kinh-duong-vuong",
+          "tenCumRap": "Galaxy Kinh Dương Vương",
+          "diaChi": "718bis Kinh Dương Vương, Phường 13, Quận 6",
+          "danhGia": "8"
+        }
+      ]
+    },
+    {
+      "maRap": "CGV",
+      "danhSachCumRap": [
+        {
+          "hinhAnh": "https://aeonmall-binhtan.com.vn/wp-content/uploads/2018/10/thumbW480_photo78-750x468.jpg",
+          "maCumRap": "cgv-aeon-binh-tan",
+          "tenCumRap": "CGV Aeon Mall Bình Tân",
+          "diaChi": "1 Đường Số 17A, An Lạc, Bình Tân",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://images.foody.vn/res/g32/315968/s800/foody-cgv-cinemas-saigonres-plaza-613-636660282575356960.jpg",
+          "maCumRap": "cgv-cgv-saigonres-nguyen-xi",
+          "tenCumRap": "CGV Saigonres Nguyễn Xí",
+          "diaChi": "Tầng 4-5,Saigonres Plaza 188, 79-81 Nguyễn Xí, Phường 26, Bình Thạnh",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://rapchieuphim.com/photos/2/cgv-crescent-mall-1.png",
+          "maCumRap": "cgv-crescent-mall",
+          "tenCumRap": "CGV Crescent Mall",
+          "diaChi": "Crescent Mall, Nguyễn Văn Linh, Tân Phú, Quận 7",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://images.foody.vn/res/g65/647648/s750/foody-cgv-cinemas-golden-plaza-767-636475856103099699.jpg",
+          "maCumRap": "cgv-golden-plaza",
+          "tenCumRap": "CGV Golden Plaza",
+          "diaChi": "922 Nguyễn Trãi, Phường 14, Quận 5",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://i0.wp.com/balodeplao.com/wp-content/uploads/2016/09/cgv-hvt-bldl02.jpg?ssl=1",
+          "maCumRap": "cgv-hoang-van-thu",
+          "tenCumRap": "CGV Liberty Hoàng Văn Thụ",
+          "diaChi": "415 Hoàng Văn Thụ, Phường 2, Tân Bình",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2019/10/e1dc6c5748dd19e9e6924fb0d985163f.jpg",
+          "maCumRap": "cgv-imc-tran-quang-khai",
+          "tenCumRap": "CGV IMC Trần Quang Khải",
+          "diaChi": "Tầng 2 & 3, Trung Tâm Văn Hóa Đa Năng, 62 Trần Quang Khải, Tân Định, Quận 1",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://images.foody.vn/res/g12/115871/s800/foody-cgv-cinemas-liberty-central-saigon-city-point-876-636199379781404202.jpg",
+          "maCumRap": "cgv-liberty-citypoint",
+          "tenCumRap": "CGV Liberty Citypoint",
+          "diaChi": "Khách sạn Liberty Citypoint, Pasteur, Bến Nghé, Quận 1",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://images.foody.vn/res/g5/47200/s/foody-cgv-cinemas-parkson-paragon-599-636445252392839459.jpg",
+          "maCumRap": "cgv-paragon",
+          "tenCumRap": "CGV Parkson Paragon",
+          "diaChi": "Tầng 5, Toà nhà Parkson Paragon, 3 Nguyễn Lương Bằng, Tân Phú, Quận 7",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://images.foody.vn/images/18947971_1918961778379779_4803310923550818304_n.jpg",
+          "maCumRap": "cgv-parkson-dong-khoi",
+          "tenCumRap": "CGV Parkson Đồng Khởi",
+          "diaChi": " Tầng 5, số 35 bis-45, Lê Thánh Tôn, Bến Nghé, Quận 1",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2019/10/e1dc6c5748dd19e9e6924fb0d985163f.jpg",
+          "maCumRap": "cgv-satra-cu-chi",
+          "tenCumRap": "CGV Satra Củ Chi",
+          "diaChi": "Tầng 3, TTTM Satra Củ Chi, Số 1239, Tỉnh Lộ 8, Ấp Thạnh An Xã Trung An, Huyện C, Củ Chi",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://kenhhomestay.com/wp-content/uploads/2019/12/cgv-su-van-hanh-4.jpg",
+          "maCumRap": "cgv-su-van-hanh",
+          "tenCumRap": "CGV Sư Vạn Hạnh",
+          "diaChi": "Tầng 6, Vạn Hạnh Mall, 11 Sư Vạn Hạnh, Phường 12, Quận 10",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2017/07/cgv-vincom-dong-khoi-14999351928593.jpg",
+          "maCumRap": "cgv-vincom-dong-khoi",
+          "tenCumRap": "CGV Vincom Center Đồng Khởi",
+          "diaChi": "72 Lê Thánh Tôn, Bến Nghé, Quận 1",
+          "danhGia": "8"
+        },
+        {
+          "hinhAnh": "https://i.imgur.com/sxsKmsP.jpg",
+          "maCumRap": "cgv-vincom-go-vap",
+          "tenCumRap": "CGV Gò Vấp",
+          "diaChi": "12 Phan Văn Trị, Phường 5, Gò Vấp",
+          "danhGia": "8"
+        }, {
+          "hinhAnh": "https://images.foody.vn/res/g77/764478/s800/foody-cgv-cinemas-vincom-landmark-81-424-636703041011591684.jpg",
+          "maCumRap": "cgv-vincom-landmark-81",
+          "tenCumRap": "CGV Vincom Center Landmark 81",
+          "diaChi": "Tầng B1 , TTTM Vincom Center Landmark 81, 772 Điện Biên Phủ, P.22, Q. Bình P.22, Q, Bình Thạn",
+          "danhGia": "8"
+        }, {
+          "hinhAnh": "https://kenhhomestay.com/wp-content/uploads/2019/11/CGV-Pearl-Plaza-1.jpg",
+          "maCumRap": "cgv-pearl-plaza",
+          "tenCumRap": "CGV Pearl Plaza",
+          "diaChi": " 561 Điện Biên Phủ, Phường 25, Bình Thạnh",
+          "danhGia": "8"
+        }, {
+          "hinhAnh": "https://images.foody.vn/res/g14/132319/s800/foody-cgv-cinemas-imax-sc-vivo-city-933-636449735142849542.jpg",
+          "maCumRap": "cgv-vivocity",
+          "tenCumRap": "CGV SC VivoCity & IMAX",
+          "diaChi": "Lầu 5, Trung tâm thương mại SC VivoCity, 1058 Nguyễn Văn Linh, Tân Phong, Quận 7",
+          "danhGia": "8"
+        }, {
+          "hinhAnh": "https://www.bandodiadiem.com/wp-content/uploads/2017/11/CGV-Celadon-T%C3%A2n-Ph%C3%BA-Celadon-City-Qu%E1%BA%ADn-T%C3%A2n-Ph%C3%BA.jpg",
+          "maCumRap": "cgv-aeon-tan-phu",
+          "tenCumRap": "CGV Celadon Tân Phú",
+          "diaChi": "L3 Aeon Mall, 30 Bờ Bao Tân Thắng, Sơn Kỳ, Tân Phú",
+          "danhGia": "8"
+        }, {
+          "hinhAnh": "https://s3img.vcdn.vn/123phim/2017/07/cgv-hung-vuong-plaza-14999351667618.jpg",
+          "maCumRap": "cgv-hung-vuong-plaza",
+          "tenCumRap": "CGV Hùng Vương Plaza",
+          "diaChi": "Parkson Hung Vuong Plaza, 126 Đường Hùng Vương, Phường 12, Quận 5",
+          "danhGia": "8"
+        }, {
+          "hinhAnh": "https://lh3.googleusercontent.com/proxy/ONqszw1RLOxjg6G5BPwHcdR7v-4xQTDgXp8L7fPyJgEEuzBj3K0VMmLXcWajGjsScm4GVmUmor_UAioIKjwBGE239eZiLo6I29CCYgbP3b3gJX4Del3MKFji0u3x8iijQpUt9mW-D5hLzeQR9ThneVAP",
+          "maCumRap": "cgv-pandora-city",
+          "tenCumRap": "CGV Pandora City",
+          "diaChi": "Lầu 3, Pandora City, 1/1 Trường Chinh, Tây Thạnh, Tân Phú",
+          "danhGia": "8"
+        }
+      ]
+    }
+  ]
