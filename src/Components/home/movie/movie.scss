@@ -154,8 +154,12 @@
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
-            img {
-              max-width: 8px;
+            div{
+              width: 8px;
+              height: 8px;
+              img {
+                width: 100%;
+              }
             }
           }
         }

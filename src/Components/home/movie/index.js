@@ -13,7 +13,7 @@ import ModalVideo from "react-modal-video";
 export default function Movie() {
   const dispatch = useDispatch();
   const [isOpen, setOpen] = useState(false);
-  const [trailer,setTrailer] = useState("");
+  const [trailer, setTrailer] = useState("");
   useEffect(() => {
     dispatch(getMovieListAction());
     dispatch(getMovieList2Action());
@@ -185,11 +185,11 @@ export default function Movie() {
                           <div className="review">
                             <p>{movie.danhGia}</p>
                             <div className="star">
-                              <img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" />
-                              <img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" />
-                              <img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" />
-                              <img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" />
-                              <img src="http://tix.vn/app/assets/img/icons/star1.2.png" alt="true" />
+                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
+                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
+                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
+                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
+                              <div><img src="http://tix.vn/app/assets/img/icons/star1.2.png" alt="true" /></div>
                             </div>
                           </div>
                         </div>

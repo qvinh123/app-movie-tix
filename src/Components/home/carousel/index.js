@@ -3,11 +3,11 @@
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { useSelector, useDispatch } from "react-redux";
-import {getCinemaAndShowTimeMovieAction} from "../../../Redux/action/mainAction/movie.action"
+import { getCinemaAndShowTimeMovieAction } from "../../../Redux/action/mainAction/movie.action"
 import format from "date-format";
 import { NavLink } from "react-router-dom";
 import ModalVideo from "react-modal-video";
-import { youtube_parser} from "../../../validation"
+import { youtube_parser } from "../../../validation"
 
 const listCarousel = [
   {
@@ -28,7 +28,7 @@ const listCarousel = [
 
 export default function Carousel() {
   const user = useSelector(state => state.signInReducer.userSignIn)
-  const [state, setstate] = useState({ maPhim: 1314, tenPhim: "" });
+  const [state, setstate] = useState({ maPhim: "", tenPhim: "" });
   const [cumRap, setCumRap] = useState({ cumRap: "" });
   const [ngayChieuGioChieu, setNgayChieuGioChieu] = useState({
     ngayChieuGioChieu: "",
@@ -40,6 +40,8 @@ export default function Carousel() {
   const listMovie = useSelector((state) => state.movieReducer.movieList);
   const listCinema = useSelector((state) => state.movieReducer.listCinemaAndShowTime);
   const dispatch = useDispatch();
+
+  console.log(listCinema)
 
   useEffect(() => {
     dispatch(getCinemaAndShowTimeMovieAction(state.maPhim));
@@ -150,93 +152,93 @@ export default function Carousel() {
   };
   return (
     <>
-    <div id="carousel" className="d-none d-md-block">
-      <ModalVideo
-        channel="youtube"
-        isOpen={isOpen}
-        autoplay
-        videoId={youtube_parser(trailer)}
-        onClose={() => setOpen(false)}
-      />
-      <Slider {...settings}>
-        {renderListCarousel()}
-      </Slider>
-      <div className="homeTools d-lg-flex d-none">
+      <div id="carousel" className="d-none d-md-block">
+        <ModalVideo
+          channel="youtube"
+          isOpen={isOpen}
+          autoplay
+          videoId={youtube_parser(trailer)}
+          onClose={() => setOpen(false)}
+        />
+        <Slider {...settings}>
+          {renderListCarousel()}
+        </Slider>
+        <div className="homeTools d-lg-flex d-none">
 
-        <div className="dropdown d-flex">
-          <button
-            type="button"
-            className=" dropdown-toggle "
-            data-toggle="dropdown"
-          >
-            {state.tenPhim === "" ? "Phim" : state.tenPhim}
-          </button>
-          <div className="dropdown-menu">{renderMovie()}</div>
-        </div>
-
-        <div className="dropdown d-flex">
-          <button
-            type="button"
-            className=" dropdown-toggle "
-            data-toggle="dropdown"
-          >
-            {cumRap.cumRap === "" ? "Rạp" : cumRap.cumRap}
-          </button>
-          <div className="dropdown-menu">
-            <a className="dropdown-item">Chọn rạp</a>
-            {renderCinema()}
-          </div>
-        </div>
-
-        <div className="dropdown d-flex">
-          <button
-            type="button"
-            className=" dropdown-toggle"
-            data-toggle="dropdown"
-          >
-            {ngayChieuGioChieu.ngayChieuGioChieu === ""
-              ? "Ngày chiếu - Giờ chiếu"
-              : ngayChieuGioChieu.ngayChieuGioChieu}
-          </button>
-          <div className="dropdown-menu">
-            <a className="dropdown-item">Chọn ngày chiếu - giờ chiếu</a>
-            {renderScreenings()}
-          </div>
-        </div>
-        <div className="dropdown d-flex justify-content-center">
-          {state.maPhim !== "" &&
-            state.tenPhim !== "" &&
-            cumRap.cumRap !== "" &&
-            ngayChieuGioChieu.ngayChieuGioChieu !== "" ? (
-            user ? (
-              <NavLink to={`/booking/${ngayChieuGioChieu.maLichChieu}`}>
-                <button
-                  style={{ backgroundColor: "#fb4226" }}
-                  type="button"
-                  className="btn"
-                >
-                  Mua vé ngay
-                </button>
-              </NavLink>
-            ) : (
-              <NavLink to="/signIn">
-                <button
-                  style={{ backgroundColor: "#fb4226" }}
-                  type="button"
-                  className="btn"
-                >
-                  Mua vé ngay
-                </button>
-              </NavLink>
-            )
-          ) : (
-            <button type="button" className="btn btn-dark">
-              Mua vé ngay
+          <div className="dropdown d-flex">
+            <button
+              type="button"
+              className=" dropdown-toggle "
+              data-toggle="dropdown"
+            >
+              {state.tenPhim === "" ? "Phim" : state.tenPhim}
             </button>
-          )}
+            <div className="dropdown-menu">{renderMovie()}</div>
+          </div>
+
+          <div className="dropdown d-flex">
+            <button
+              type="button"
+              className=" dropdown-toggle "
+              data-toggle="dropdown"
+            >
+              {cumRap.cumRap === "" ? "Rạp" : cumRap.cumRap}
+            </button>
+            <div className="dropdown-menu">
+              <a className="dropdown-item">Chọn rạp</a>
+              {renderCinema()}
+            </div>
+          </div>
+
+          <div className="dropdown d-flex">
+            <button
+              type="button"
+              className=" dropdown-toggle"
+              data-toggle="dropdown"
+            >
+              {ngayChieuGioChieu.ngayChieuGioChieu === ""
+                ? "Ngày chiếu - Giờ chiếu"
+                : ngayChieuGioChieu.ngayChieuGioChieu}
+            </button>
+            <div className="dropdown-menu">
+              <a className="dropdown-item">Chọn ngày chiếu - giờ chiếu</a>
+              {renderScreenings()}
+            </div>
+          </div>
+          <div className="dropdown d-flex justify-content-center">
+            {state.maPhim !== "" &&
+              state.tenPhim !== "" &&
+              cumRap.cumRap !== "" &&
+              ngayChieuGioChieu.ngayChieuGioChieu !== "" ? (
+              user ? (
+                <NavLink to={`/booking/${ngayChieuGioChieu.maLichChieu}`}>
+                  <button
+                    style={{ backgroundColor: "#fb4226" }}
+                    type="button"
+                    className="btn"
+                  >
+                    Mua vé ngay
+                </button>
+                </NavLink>
+              ) : (
+                <NavLink to="/signIn">
+                  <button
+                    style={{ backgroundColor: "#fb4226" }}
+                    type="button"
+                    className="btn"
+                  >
+                    Mua vé ngay
+                </button>
+                </NavLink>
+              )
+            ) : (
+              <button type="button" className="btn btn-dark">
+                Mua vé ngay
+              </button>
+            )}
+          </div>
         </div>
       </div>
-    </div>
     </>
   );
 }
