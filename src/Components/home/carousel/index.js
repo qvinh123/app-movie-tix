@@ -41,7 +41,6 @@ export default function Carousel() {
   const listCinema = useSelector((state) => state.movieReducer.listCinemaAndShowTime);
   const dispatch = useDispatch();
 
-  console.log(listCinema)
 
   useEffect(() => {
     dispatch(getCinemaAndShowTimeMovieAction(state.maPhim));
