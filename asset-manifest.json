@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/tix/static/css/main.353a16fa.chunk.css",
+    "main.js": "/tix/static/js/main.ed4912b6.chunk.js",
+    "main.js.map": "/tix/static/js/main.ed4912b6.chunk.js.map",
+    "runtime-main.js": "/tix/static/js/runtime-main.0b57a858.js",
+    "runtime-main.js.map": "/tix/static/js/runtime-main.0b57a858.js.map",
+    "static/css/2.23c14621.chunk.css": "/tix/static/css/2.23c14621.chunk.css",
+    "static/js/2.72232335.chunk.js": "/tix/static/js/2.72232335.chunk.js",
+    "static/js/2.72232335.chunk.js.map": "/tix/static/js/2.72232335.chunk.js.map",
+    "static/js/3.8fb3498a.chunk.js": "/tix/static/js/3.8fb3498a.chunk.js",
+    "static/js/3.8fb3498a.chunk.js.map": "/tix/static/js/3.8fb3498a.chunk.js.map",
+    "index.html": "/tix/index.html",
+    "static/css/2.23c14621.chunk.css.map": "/tix/static/css/2.23c14621.chunk.css.map",
+    "static/css/main.353a16fa.chunk.css.map": "/tix/static/css/main.353a16fa.chunk.css.map",
+    "static/js/2.72232335.chunk.js.LICENSE.txt": "/tix/static/js/2.72232335.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/tix/static/media/pexels-ricardo-ortiz-6447217.b5341665.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b57a858.js",
+    "static/css/2.23c14621.chunk.css",
+    "static/js/2.72232335.chunk.js",
+    "static/css/main.353a16fa.chunk.css",
+    "static/js/main.ed4912b6.chunk.js"
+  ]
+}
