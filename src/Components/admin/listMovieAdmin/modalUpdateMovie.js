@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { updateMovieAdminAction } from "../../../Redux/action/adminAction/listMovie.action"
 import { useDispatch,useSelector } from "react-redux"
 export default function ModalUpdateMovie({ movieEdit, pageCurrent }) {
-  const user = useSelector(state => state.signInReducer.userSignIn)
+  const user = useSelector(state => state?.signInReducer?.userSignIn)
   const dispatch = useDispatch()
   const [state, setstate] = useState({
     values: {

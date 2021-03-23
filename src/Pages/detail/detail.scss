@@ -1,7 +1,7 @@
 #detailMainTop {
   position: relative;
   margin-top: 61px;
-  @media screen and (max-width:576px){
+  @media screen and (max-width: 576px) {
     margin-top: 64px;
   }
   .styleBlur {
@@ -208,10 +208,24 @@
       padding: 20px 0;
     }
     li {
-      a {
-        @include text($color-white, $fs-3, $fw-2);
+      .textCinema {
         background-color: transparent;
         transition: 0.2s ease-in-out;
+        @include text($color-black, $fs-3, $fw-2);
+        &:hover {
+          transform: scale(1);
+          &:not(.active) {
+            transform: scale(1.2);
+          }
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+      .textMovie {
+        background-color: transparent;
+        transition: 0.2s ease-in-out;
+        @include text($color-white, $fs-3, $fw-2);
         &:hover {
           transform: scale(1);
           &:not(.active) {
@@ -237,20 +251,28 @@
       border-radius: 5px;
     }
     #thongtin {
-      color: white;
-      .leftInfoDetail {
-        @media screen and (max-width: 768px) {
-          display: flex;
-          justify-content: center;
-          text-align: center;
-        }
-        .contentTitle {
-          width: 35%;
-        }
-        .contentInfo {
-          width: 40%;
+        font-size: 14px;
+      .contentTitle {
+        width: 35%;
+        font-weight: 500;
+        @media screen and (max-width:576px){
+          color:#9b9b9b;
         }
       }
+      .leftInfoDetail {
+        .contentInfo {
+          width: 50%;
+          @media screen and (max-width: 768px) {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+    .thongTin-movie {
+      color: white;
+    }
+    .thongTin-cinema {
+      color: #333333;
     }
 
     #danhGia {
@@ -316,6 +338,7 @@
           max-width: 580px;
           background-color: white;
           color: #333;
+          border: 1px solid #e6e6e6;
           @media screen and (max-width: 576px) {
             margin: 15px 0;
           }
@@ -379,6 +402,10 @@
     .col-lg-4 {
       padding-left: 0;
       padding-right: 0;
+      @media screen and (min-width:992px){
+        max-height: 705px;
+        overflow-y:scroll;
+      }
       .listCinemas {
         list-style: none;
         padding: 0 10px;

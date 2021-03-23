@@ -20,6 +20,9 @@
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
       text-align: center;
       color: #fff;
+      @media screen and (max-width:576px){
+        padding: 70px 32px 60px;
+      }
       .form-item {
         height: 70px;
         width: 100%;

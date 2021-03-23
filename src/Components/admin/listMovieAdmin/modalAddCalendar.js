@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {getShowTimeCinemAction,} from "../../../Redux/action/mainAction/cinema.action";
+import {getShowTimeCinemAction,getCinemaAction} from "../../../Redux/action/mainAction/cinema.action";
 import { addCalendarAction } from "../../../Redux/action/adminAction/listMovie.action"
 
 export default function ModalAddCalendar() {
   const cinema = useSelector((state) => state.cinemaReducer.listCinema);
+  console.log(cinema)
   const maPhim = useSelector(
     (state) => state.listMovieAdminReducer.codeMovie
   );
@@ -90,6 +91,10 @@ export default function ModalAddCalendar() {
       giaVe: ""
     })
   }
+
+  useEffect(() => {
+    dispatch(getCinemaAction())
+  }, [])
 
   useEffect(() => {
     dispatch(getShowTimeCinemAction(state.maHeThongRap));

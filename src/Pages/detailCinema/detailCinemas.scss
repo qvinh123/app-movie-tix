@@ -70,11 +70,6 @@
           @include text($color-primary, $fs-1 - 1, $fw-1);
         }
       }
-      // @media screen and (min-width: 992px) {
-      //   &::after {
-      //     @include borderBottom;
-      //   }
-      // }
       &:hover {
         opacity: 1;
       }

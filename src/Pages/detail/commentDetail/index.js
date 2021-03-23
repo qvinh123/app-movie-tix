@@ -3,7 +3,7 @@ import StarRatings from 'react-star-ratings';
 import { useSelector, useDispatch } from "react-redux"
 import {postCommnentAction} from "../../../Redux/action/mainAction/infoUser.action"
 
-export default function CommentDetail({ maPhim }) {
+export default function CommentDetail({ maPhim,cinemaSystemCode }) {
     const [rating, setRating] = useState(1)
     const [comments, setComments] = useState({ comment: "" });
 
@@ -29,7 +29,7 @@ export default function CommentDetail({ maPhim }) {
     }
 
     const handleClick = () => {
-        dispatch(postCommnentAction({ comment: comments.comment, maPhim: Number(maPhim), ngayBinhLuan: dateHour(), rating: Number(rating), taiKhoan: user.taiKhoan }))
+        dispatch(postCommnentAction({maCumRap:cinemaSystemCode, comment: comments.comment, maPhim: Number(maPhim), ngayBinhLuan: dateHour(), rating: Number(rating), taiKhoan: user.taiKhoan }))
         setRating(1)
         setComments({...comments,comment:""})
     }

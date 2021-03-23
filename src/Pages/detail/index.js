@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-operators */
 /* eslint-disable eqeqeq */
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -300,7 +301,7 @@ export default function Detail() {
           <ul className="nav nav-pills justify-content-center align-items-center tab-detail">
             <li className="nav-item">
               <a
-                className="nav-link active"
+                className="nav-link active textMovie"
                 data-toggle="pill"
                 href="#lichchieu"
               >
@@ -308,12 +309,12 @@ export default function Detail() {
                 </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" data-toggle="pill" href="#thongtin">
+              <a className="nav-link textMovie" data-toggle="pill" href="#thongtin">
                 Thông tin
                 </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" data-toggle="pill" href="#danhGia">
+              <a className="nav-link textMovie" data-toggle="pill" href="#danhGia">
                 Đánh giá
                 </a>
             </li>
@@ -331,9 +332,9 @@ export default function Detail() {
                   </div>
                 </div>
               </div>
-              <div className="tab-pane container fade" id="thongtin">
+              <div className="tab-pane container fade thongTin-movie" id="thongtin">
                 <div className="row">
-                  <div className="col-lg-6 col-12">
+                  <div className="col-md-6 col-12">
                     <div className="row leftInfoDetail">
                       <p className="contentTitle">Ngày công chiếu</p>
                       <p className="contentInfo">
@@ -377,7 +378,7 @@ export default function Detail() {
                       <p className="contentInfo">Đang cập nhật</p>
                     </div>
                   </div>
-                  <div className="col-lg-6 col-12">
+                  <div className="col-md-6 col-12">
                     <div className="row rowRightInfo">
                       <p className="contentTitle">Nội dung</p>
                       <p className="contentInfo">

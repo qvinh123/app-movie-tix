@@ -135,6 +135,9 @@ header {
             list-style: none;
             &:hover {
               background-color: #888;
+              @media screen and (max-width:768px){
+                background-color: transparent;
+              }
             }
           }
         }

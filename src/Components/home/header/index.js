@@ -88,9 +88,9 @@ export default function Header() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href={width < 768 ? "/cinemaMobile" : "#cinemaComplex"}>
-                Cụm rạp
-              </a>
+              {width < 768 ? <NavLink className="nav-link" to="/cinemaMobile">Cụm rạp
+              </NavLink> : <a className="nav-link" href="#cinemaComplex">Cụm rạp</a>}
+
             </li>
             <li className="nav-item">
               <a className="nav-link" href={window.location.pathname === "/" ? "#news" : "/"}>

@@ -55,6 +55,9 @@
         margin: 10px 0 20px;
       }
       .lefttitle {
+        @media screen and (max-width:576px) {
+          padding: 0 15px;
+        }
         p {
           margin-bottom: 0;
         }
@@ -148,8 +151,9 @@
                 outline: none;
                 border-radius: 5px;
                 text-align: center;
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 576px) {
                   width: 37px;
+                  font-size: 12px;
                 }
               }
             }
@@ -275,13 +279,13 @@
     }
     }
     .booking_notice {
-      padding-left: 40px;
-      padding-right: 40px;
-      padding-bottom: 4%;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-bottom: 10%;
       margin-right: 4px;
       background-color: #fff;
       text-align: center;
-      margin-top: 60px;
+      margin-top: 70px;
       @media screen and (max-width:768px){
         margin-top: 30px;
         padding-bottom: 10%;
@@ -323,7 +327,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    padding-top: 15px;
     height: 60px;
     font-size: 24px;
     text-align: center;

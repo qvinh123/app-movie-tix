@@ -60,7 +60,7 @@ class MainService {
     getCinemaAPI = () => {
         return axios({
             method: "GET",
-            url: `https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinHeThongRap?maHeThongRap`,
+            url: "https://movie0706.cybersoft.edu.vn/api/QuanLyRap/LayThongTinHeThongRap",
         })
     }
 

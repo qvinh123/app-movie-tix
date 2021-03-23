@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
@@ -150,7 +150,7 @@ export default function Booking() {
   useEffect(() => {
     dispatch(getTicketListAction(maLichChieu, () => { setLoading(false) }));
     setInterval(timeit, 1000);
-    return()=>{
+    return () => {
       setLoading(true)
     }
   }, []);
@@ -171,10 +171,12 @@ export default function Booking() {
           </div>
           <div className="rightstep">
             <div className="info-account d-flex align-items-center">
-              <img
-                src="https://tix.vn/app/assets/img/avatar.png"
-                alt="account"
-              />
+              <NavLink to="/">
+                <img
+                  src="https://tix.vn/app/assets/img/avatar.png"
+                  alt="account"
+                />
+              </NavLink>
               <span style={{ color: "#9b9b9b" }} className="d-none d-lg-block ml-2">
                 {user?.taiKhoan}
               </span>
