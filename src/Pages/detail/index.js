@@ -125,12 +125,15 @@ export default function Detail() {
                       } else {
                         return (
                           <NavLink to={`/signIn`}>
-                            <span key={index}>
+                          <span key={index}>
                               {format(
-                                "dd-MM-yyy | hh:mm",
+                                "dd-MM-yyy",
                                 new Date(ngayChieuGioChieu)
                               )}
-                            </span>
+                            </span> ~ {format(
+                              "hh:mm",
+                              new Date(ngayChieuGioChieu)
+                            )}
                           </NavLink>
                         );
                       }

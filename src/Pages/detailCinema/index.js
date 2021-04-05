@@ -100,11 +100,11 @@ export default function DetailCinema() {
                             {format(
                               "dd-MM-yyy",
                               new Date(lich.ngayChieuGioChieu)
-                            )} ~ {format(
+                            )} 
+                          </span> ~ {format(
                               "hh:mm",
                               new Date(lich.ngayChieuGioChieu)
                             )}
-                          </span>
                         </NavLink>
                       );
                     })}
