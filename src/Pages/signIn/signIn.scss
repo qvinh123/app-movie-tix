@@ -84,7 +84,7 @@
     }
     .form-footer {
       font-size: 1em;
-      padding: 1.5em 0;
+      padding: 1.5em 0 0;
       text-align: center;
       a {
         color: #8c8c8c;
@@ -130,7 +130,7 @@
         transform: translate(-50%,-50%) rotate(45deg);
       }
       @media screen and(max-width:576px){
-        top: 30px !important;
+        top: 40px !important;
         right: 10px !important;
       }
     }
