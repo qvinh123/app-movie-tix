@@ -11,8 +11,12 @@ import { youtube_parser } from "../../../validation"
 
 const listCarousel = [
   {
+    hinhAnh: "https://s3img.vcdn.vn/123phim/2021/03/oi-troi-oi-16167488704232.jpg",
+    trailer: "https://youtu.be/6K4RpziVwuA"
+  },
+  {
     hinhAnh: "https://s3img.vcdn.vn/123phim/2021/03/bo-gia-16146819941008.png",
-    trailer: "https://youtu.be/jluSu8Rw6YE"
+    trailer: "https://youtu.be/jluSu8Rw6YE",
   },
   {
     hinhAnh: "https://s3img.vcdn.vn/123phim/2021/03/chaos-walking-16158835840511.jpg",
@@ -22,6 +26,10 @@ const listCarousel = [
     hinhAnh: "https://s3img.vcdn.vn/123phim/2021/03/minari-16158836515210.jpg",
     trailer: "https://youtu.be/z4bqat8idns"
   },
+  {
+    hinhAnh: "https://s3img.vcdn.vn/123phim/2021/03/an-quy-16170973985377.png",
+    trailer: "https://youtu.be/1ZMmdjgarK8"
+  }
 ]
 
 

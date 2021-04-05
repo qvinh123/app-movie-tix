@@ -15,21 +15,13 @@ export default function CommentDetail({ maPhim,cinemaSystemCode }) {
         setRating(newRating);
     }
 
-    const dateHour = () => {
-        let today = new Date();
-        let date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
-        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
-        let dateTime = date + '-' + time;
-        return dateTime
-    }
-
     const handleChangeComment = (e) => {
         let { name, value } = e.target
         setComments({ ...comments, [name]: value })
     }
 
     const handleClick = () => {
-        dispatch(postCommnentAction({maCumRap:cinemaSystemCode, comment: comments.comment, maPhim: Number(maPhim), ngayBinhLuan: dateHour(), rating: Number(rating), taiKhoan: user.taiKhoan }))
+        dispatch(postCommnentAction({maCumRap:cinemaSystemCode, comment: comments.comment, maPhim: Number(maPhim), ngayBinhLuan: new Date(), rating: Number(rating), taiKhoan: user.taiKhoan }))
         setRating(1)
         setComments({...comments,comment:""})
     }

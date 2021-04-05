@@ -2,11 +2,27 @@
   margin-top: 60px;
   position: relative;
   .slick-slider {
+    .slick-arrow {
+      width: 50px;
+      height: 100px;
+      z-index: 3;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      &::before {
+        content: "";
+      }
+    }
     .slick-prev {
-        display: none !important;
+      left: 15px;
+      top: 45%;
+      background-image: url("https://tix.vn/app/assets/img/icons/back-session.png");
+  
     }
     .slick-next {
-        display: none !important;
+      right: 15px;
+      top: 45%;
+      background-image: url("https://tix.vn/app/assets/img/icons/next-session.png");
     }
   }
   .item {

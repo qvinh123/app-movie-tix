@@ -32,7 +32,7 @@ export default function ListUserAdmin() {
   const renderListUserInfo = () => {
     return listUserInfo.map((user, index) => {
       return (
-        <tr key={index}>
+        <tr key={user.taiKhoan}>
           <td>{index + 1}</td>
           <td>{user.hoTen}</td>
           <td>{user.taiKhoan}</td>

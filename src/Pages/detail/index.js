@@ -21,7 +21,7 @@ import { comment } from "../../Redux/action/mainAction/infoUser.action"
 import StarRatings from 'react-star-ratings';
 import { mainService } from "../../service";
 import Swal from 'sweetalert2'
-import { youtube_parser} from "../../validation"
+import { youtube_parser } from "../../validation"
 
 export default function Detail() {
   const avatarImg = JSON.parse(localStorage.getItem("avatarImg"))
@@ -113,10 +113,13 @@ export default function Detail() {
                           <NavLink to={`/booking/${maLichChieu}`}>
                             <span key={index}>
                               {format(
-                                "dd-MM-yyy | hh:mm",
+                                "dd-MM-yyy",
                                 new Date(ngayChieuGioChieu)
                               )}
-                            </span>
+                            </span> ~ {format(
+                              "hh:mm",
+                              new Date(ngayChieuGioChieu)
+                            )}
                           </NavLink>
                         );
                       } else {
@@ -149,6 +152,21 @@ export default function Detail() {
     }
   }
 
+  const formatDate = (date) => {
+    const calcDayPassed = (date1, date2) => {
+      return Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24))
+    }
+    const dayPassed = calcDayPassed(new Date(), date)
+    if (dayPassed === 0) { return "Hôm nay" }
+    if (dayPassed === 1) return "Hôm qua"
+    if (dayPassed <= 7) return `${dayPassed} ngày trước`
+    const day = `${date.getDate()}`.padStart(2, 0);
+    const month = `${date.getMonth() + 1}`.padStart(2, 0);
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+
+
   const renderListComment = () => {
     return listComment?.reverse().filter(comment => comment.maPhim == maPhim).slice(0, showMore.numberOfitemsShown).map((comment, index) => {
       return <div key={index} className="reviewerContain detailMainStyle ">
@@ -160,14 +178,14 @@ export default function Detail() {
               </div>
               <div className="infoReviewerName">
                 <div style={{ fontWeight: 500 }}>{comment.taiKhoan}</div>
-                <p className="infoReviewerTime ">{comment.ngayBinhLuan}</p>
+                <p className="infoReviewerTime ">{formatDate(new Date(comment.ngayBinhLuan))}</p>
               </div>
             </div>
             <div className="infoStar">
               <div className="core">
                 <p className="mb-0">{comment.rating * 2}</p>
               </div>
-              <div className="row star">
+              <div className="row star justify-content-center">
                 <StarRatings
                   starEmptyColor="#fb4226"
                   numberOfStars={comment.rating}
@@ -319,7 +337,8 @@ export default function Detail() {
                 </a>
             </li>
           </ul>
-          <div id="cinemaComplex">
+
+          <div id="cinemaComplex" >
             <div className="tab-content">
               <div className="tab-pane container active" id="lichchieu">
                 <div className="row">
@@ -333,7 +352,7 @@ export default function Detail() {
                 </div>
               </div>
               <div className="tab-pane container fade thongTin-movie" id="thongtin">
-                <div className="row">
+                <div className="row mx-0">
                   <div className="col-md-6 col-12">
                     <div className="row leftInfoDetail">
                       <p className="contentTitle">Ngày công chiếu</p>

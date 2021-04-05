@@ -30,7 +30,7 @@ export default function ListMovieAdmin() {
   const renderListMovie = () => {
     return listMovie?.filter(item => item.tenPhim.toLowerCase().indexOf(keyword.toLowerCase()) !== -1).map((movie, index) => {
       return (
-        <tr key={index}>
+        <tr key={movie.maPhim}>
           <td >{movie.maPhim}</td>
           <td>{movie.tenPhim}</td>
           <td>{movie.biDanh}</td>

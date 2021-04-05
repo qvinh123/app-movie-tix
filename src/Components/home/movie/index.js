@@ -100,7 +100,6 @@ export default function Movie() {
                             <img
                               src={movie.hinhAnh}
                               alt="film1"
-                              height="297px"
                             />
                           </a>
                           <NavLink to={`/detail/${movie.maPhim}`}>
@@ -133,7 +132,7 @@ export default function Movie() {
                         <div className="film_info">
                           <div className="name-film">
                             <span className="ageType">C18</span>
-                            <span>{movie.tenPhim}(C18)</span>
+                            <span>{movie.tenPhim} (C18)</span>
                           </div>
                           <div className="minutes-film">
                             <p>100 phút </p>
@@ -149,7 +148,7 @@ export default function Movie() {
                   })}
                 </Slider>
               </div>
-              <div id="sapchieu" className="container tab-pane fade">
+              <div id="sapchieu" className="tab-pane fade">
                 <Slider {...settings}>
                   {state2?.map((movie, index) => {
                     return (
@@ -160,7 +159,6 @@ export default function Movie() {
                             <img
                               src={movie.hinhAnh}
                               alt="film1"
-                              height="297px"
                             />
                           </a>
                           <NavLink to={`/detail/${movie.maPhim}`}>

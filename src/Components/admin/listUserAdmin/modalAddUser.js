@@ -75,7 +75,7 @@ export default function ModalAddUser() {
 
                                 <div className="form-group">
                                     <select name="maLoaiNguoiDung" className="form-select select mt-2" onChange={formik.handleChange}>
-                                        <option selected>Loại người dùng</option>
+                                        <option defaultValue>Loại người dùng</option>
                                         <option value="KhachHang">Khách hàng</option>
                                         <option value="QuanTri">Quản trị</option>
                                     </select>

@@ -88,14 +88,20 @@ export default function DetailCinema() {
                         user ? <NavLink to={`/booking/${lich.maLichChieu}`}>
                           <span key={index}>
                             {format(
-                              "dd-MM-yyy | hh:mm",
+                              "dd-MM-yyy",
                               new Date(lich.ngayChieuGioChieu)
                             )}
-                          </span>
+                          </span> ~ {format(
+                              "hh:mm",
+                              new Date(lich.ngayChieuGioChieu)
+                            )}
                         </NavLink> : <NavLink to="/signIn">
                           <span key={index}>
                             {format(
-                              "dd-MM-yyy | hh:mm",
+                              "dd-MM-yyy",
+                              new Date(lich.ngayChieuGioChieu)
+                            )} ~ {format(
+                              "hh:mm",
                               new Date(lich.ngayChieuGioChieu)
                             )}
                           </span>
@@ -145,7 +151,7 @@ export default function DetailCinema() {
                     </span>
                     <br />
                   </div>
-                  <button className="btnBuyTicketDetail">Mua vé</button>
+                  <a href="#detailMainBottom" className="btnBuyTicketDetail">Mua vé</a>
                 </div>
                 <div className="col-2 circleStar d-none d-lg-block">
                   <div className="circleSum"></div>
@@ -319,7 +325,7 @@ export default function DetailCinema() {
                 })}
               </div>
             </div>
-            <div className="tab-pane container fade" id="danhGia">
+            <div className="tab-pane fade" id="danhGia">
               <div id="detailReviewer">
                 <div className="detailMainStyle">
                   <div onClick={() => user ? "" : Swal.fire({

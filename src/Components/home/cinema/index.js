@@ -118,7 +118,7 @@ export default function Cinema() {
                   </div>
                   <div className="info">
                     <span className="ageType">C16</span>
-                    <span>{phim.tenPhim}</span>
+                    <span className="ml-1">{phim.tenPhim}</span>
                     <p className="mt-1">95 phút - TIX 7.2 - IMDb 0</p>
                   </div>
                 </div>
@@ -128,14 +128,17 @@ export default function Cinema() {
 
                     {phim.lstLichChieuTheoPhim.map((lich, index) => {
                       return (
-                          <a key={index}>
-                            <span>
-                              {format(
-                                "dd-MM-yyy | hh:mm",
-                                new Date(lich.ngayChieuGioChieu)
-                              )}
-                            </span>
-                          </a>
+                        <a key={index}>
+                          <span>
+                            {format(
+                              "dd-MM-yyy",
+                              new Date(lich.ngayChieuGioChieu)
+                            )} 
+                          </span> ~ {format(
+                            "hh:mm",
+                            new Date(lich.ngayChieuGioChieu)
+                          )}
+                        </a>
                       );
                     })}
                   </div>

@@ -6,7 +6,6 @@ import { addCalendarAction } from "../../../Redux/action/adminAction/listMovie.a
 
 export default function ModalAddCalendar() {
   const cinema = useSelector((state) => state.cinemaReducer.listCinema);
-  console.log(cinema)
   const maPhim = useSelector(
     (state) => state.listMovieAdminReducer.codeMovie
   );
@@ -115,22 +114,22 @@ export default function ModalAddCalendar() {
               <div className="flex-form">
                 <div style={{ width: "50%", padding: "15px" }}>
                   <select value={state.maHeThongRap} onChange={changeCinema} className="form-select select">
-                    <option selected>Chọn hệ thống rạp</option>
+                    <option defaultValue>Chọn hệ thống rạp</option>
                     {renderListCinema()}
                   </select>
 
                   <select value={state.maCumRap} onChange={changeCinemaSystem} className="form-select select">
-                    <option selected>Chọn cụm rạp</option>
+                    <option defaultValue>Chọn cụm rạp</option>
                     {renderCinemaSystem()}
                   </select>
 
                   <select value={state.maRap} onChange={changeCodeCinema} className="form-select select">
-                    <option selected>Chọn mã rạp</option>
+                    <option defaultValue>Chọn mã rạp</option>
                     {renderMaRap()}
                   </select>
 
                   <select value={state.giaVe} onChange={changePriceTicket} className="form-select select">
-                    <option selected>Giá vé</option>
+                    <option defaultValue>Giá vé</option>
                     <option value="75000">75.000</option>
                     <option value="90000">90.000</option>
                     <option value="200000">200.000</option>

@@ -25,7 +25,7 @@ export default function Header() {
       height
     };
   }
-  const { width, height } = getWindowDimensions()
+  const { width} = getWindowDimensions()
 
   return (
     <header>
