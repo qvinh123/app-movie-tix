@@ -20,14 +20,14 @@
   }
   .slick-prev {
     left: 8px !important;
-    background-image: url("https://tix.vn/app/assets/img/icons/back-session.png");
+    background-image: url("../../../assets/image/back-session.png");
     @media screen and (min-width: 992px) {
       left: -70px !important;
     }
   }
   .slick-next {
     right: 8px !important;
-    background-image: url("https://tix.vn/app/assets/img/icons/next-session.png");
+    background-image: url("../../../assets/image/next-session.png");
     @media screen and (min-width: 992px) {
       right: -70px !important;
     }
@@ -72,7 +72,6 @@
         @include maxWidth;
       }
       .film {
-        margin-bottom: 50px;
         position: relative;
         .film_img {
           position: relative;

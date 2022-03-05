@@ -1,38 +1,58 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+import cgv from "../../../assets/image/cgv.png"
+import bhd from "../../../assets/image/bhd.png"
+import galaxycine from "../../../assets/image/galaxycine.png"
+import cinestar from "../../../assets/image/cinestar.png"
+import lotte from "../../../assets/image/lotte.png"
+
+import megags from "../../../assets/image/megags.png"
+import bt from "../../../assets/image/bt.jpg"
+import dongdacinema from "../../../assets/image/dongdacinema.png"
+import TOUCH from "../../../assets/image/TOUCH.png"
+import cnx from "../../../assets/image/cnx.jpg"
+
+import STARLIGHT from "../../../assets/image/STARLIGHT.png"
+import dcine from "../../../assets/image/dcine.png"
+import zalopay_icon from "../../../assets/image/zalopay_icon.png"
+import payoo from "../../../assets/image/payoo.jpg"
+import VCB from "../../../assets/image/VCB.png"
+
+import AGRIBANK from "../../../assets/image/AGRIBANK.png"
+import VIETTINBANK from "../../../assets/image/VIETTINBANK.png"
+import IVB from "../../../assets/image/IVB.png"
+import go from "../../../assets/image/123go.png"
+import laban from "../../../assets/image/laban.png"
+
+import apple from "../../../assets/image/apple-logo.png"
+import android from "../../../assets/image/android-logo.png"
+import facebook from "../../../assets/image/facebook-logo.png"
+import zalo from "../../../assets/image/zalo-logo.png"
+import zion from "../../../assets/image/zion-logo.jpg"
+
+import bct from "../../../assets/image/GOV.png"
+
 const listPartner = [
-  {
-    ma: 1,
-    danhSachLogo: ["https://tix.vn/app/assets/img/icons/cgv.png",
-      "https://tix.vn/app/assets/img/icons/bhd.png",
-      "https://tix.vn/app/assets/img/icons/galaxycine.png",
-      "https://tix.vn/app/assets/img/icons/cinestar.png",
-      "https://s3img.vcdn.vn/123phim/2018/09/404b8c4b80d77732e7426cdb7e24be20.png"]
-  },
-  {
-    ma: 2,
-    danhSachLogo: ["https://tix.vn/app/assets/img/icons/megags.png",
-      "https://tix.vn/app/assets/img/icons/bt.jpg",
-      "https://tix.vn/app/assets/img/icons/dongdacinema.png",
-      "https://tix.vn/app/assets/img/icons/TOUCH.png",
-      "https://tix.vn/app/assets/img/icons/cnx.jpg"]
-  },
-  {
-    ma: 3,
-    danhSachLogo: ["https://tix.vn/app/assets/img/icons/STARLIGHT.png",
-      "https://tix.vn/app/assets/img/icons/dcine.png",
-      "https://tix.vn/app/assets/img/icons/zalopay_icon.png",
-      "https://tix.vn/app/assets/img/icons/payoo.jpg",
-      "https://tix.vn/app/assets/img/icons/VCB.png"]
-  },
-  {
-    ma: 4,
-    danhSachLogo: ["https://tix.vn/app/assets/img/icons/AGRIBANK.png",
-      "https://tix.vn/app/assets/img/icons/VIETTINBANK.png",
-      "https://tix.vn/app/assets/img/icons/IVB.png",
-      "https://tix.vn/app/assets/img/icons/123go.png",
-      "https://tix.vn/app/assets/img/icons/laban.png"]
-  }
+  cgv,
+  bhd,
+  galaxycine,
+  cinestar,
+  lotte,
+  megags,
+  bt,
+  dongdacinema,
+  TOUCH,
+  cnx,
+  STARLIGHT,
+  dcine,
+  zalopay_icon,
+  payoo,
+  VCB,
+  AGRIBANK,
+  VIETTINBANK,
+  IVB,
+  go,
+  laban
 ]
+
 export default function Footer() {
   return (
     <footer>
@@ -57,74 +77,41 @@ export default function Footer() {
           </div>
           <div className="col-lg-4 d-none d-lg-block">
             <p className="title-footer">ĐỐI TÁC</p>
-            <div className="row">
-              <div className="col-12">
-                {listPartner.filter(logo => logo.ma === 1).map((logo) => {
-                  return logo.danhSachLogo.map((logo, index) => {
-                    return <a key={index}>
-                      <img src={logo} alt="logoPartner" />
-                    </a>
-                  })
-                })}
-              </div>
-              <div className="col-12">
-                {listPartner.filter(logo => logo.ma === 2).map((logo) => {
-                  return logo.danhSachLogo.map((logo, index) => {
-                    return <a key={index}>
-                      <img src={logo} alt="logoPartner" />
-                    </a>
-                  })
-                })}
-              </div>
-              <div className="col-12">
-                {listPartner.filter(logo => logo.ma === 3).map((logo) => {
-                  return logo.danhSachLogo.map((logo, index) => {
-                    return <a key={index}>
-                      <img src={logo} alt="logoPartner" />
-                    </a>
-                  })
-                })}
-              </div>
-              <div className="col-12">
-                {listPartner.filter(logo => logo.ma === 4).map((logo) => {
-                  return logo.danhSachLogo.map((logo, index) => {
-                    return <a key={index}>
-                      <img src={logo} alt="logoPartner" />
-                    </a>
-                  })
-                })}
-              </div>
+            <div className="partner">
+              {listPartner.map((logo) => {
+                return <img key={logo} src={logo} alt="logoPartner" />
+              })}
             </div>
           </div>
           <div className="col-lg-4 col-12">
-            <div className="row">
+            <div className="row ">
               <div className="col-6 d-none d-lg-block">
                 <p className="title-footer">MOBILE APP</p>
                 <a>
                   <img
-                    src="https://tix.vn/app/assets/img/icons/apple-logo.png"
-                    alt="true"
+                    src={apple}
+                    alt="apple"
                   />
                 </a>
                 <a>
                   <img
-                    src="https://tix.vn/app/assets/img/icons/android-logo.png"
-                    alt="true"
+                    src={android}
+                    alt="android"
                   />
                 </a>
               </div>
-              <div className="col-lg-6 col-12">
+              <div className="col-lg-6 col-12" style={{textAlign: 'center'}}>
                 <p className="title-footer d-none d-lg-block">SOCIAL</p>
                 <a>
                   <img
-                    src="https://tix.vn/app/assets/img/icons/facebook-logo.png"
-                    alt="true"
+                    src={facebook}
+                    alt="facebook"
                   />
                 </a>
                 <a>
                   <img
-                    src="https://tix.vn/app/assets/img/icons/zalo-logo.png"
-                    alt="true"
+                    src={zalo}
+                    alt="zalo"
                   />
                 </a>
               </div>
@@ -136,8 +123,8 @@ export default function Footer() {
           <div className="col-lg-2 col-12 mb-4">
             <img
               className="img-footer"
-              src="https://tix.vn/app/assets/img/icons/zion-logo.jpg"
-              alt="true"
+              src={zion}
+              alt="zion"
             />
           </div>
           <div className="col-lg-8 col-12">
@@ -158,14 +145,14 @@ export default function Footer() {
               Số Điện Thoại (Hotline): 1900&nbsp;545&nbsp;436
               <br />
               Email:
-              <a href="mailto:support@tix.vn">support@tix.vn</a>
+              <a href="mailto:support@tix.vn"> support@tix.vn</a>
             </span>
           </div>
           <div className="col-lg-2 col-12">
             <a>
               <img
-                src="https://s3img.vcdn.vn/123phim/2020/03/d1e6bd560daa9e20131ea8a0f62e87f8.png"
-                alt="true"
+                src={bct}
+                alt="bct"
               />
             </a>
           </div>

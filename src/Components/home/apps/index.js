@@ -1,13 +1,40 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import Slider from "react-slick";
+import mobile from "../../../assets/image/mobile.png"
+import slide1 from "../../../assets/image/slide1.jpg"
+import slide2 from "../../../assets/image/slide2.jpg"
+import slide3 from "../../../assets/image/slide3.jpg"
+import slide4 from "../../../assets/image/slide4.jpg"
+import slide5 from "../../../assets/image/slide5.jpg"
+import slide6 from "../../../assets/image/slide6.jpg"
+import slide7 from "../../../assets/image/slide7.jpg"
+import slide8 from "../../../assets/image/slide8.jpg"
+import slide9 from "../../../assets/image/slide9.jpg"
+import slide10 from "../../../assets/image/slide10.jpg"
+import slide11 from "../../../assets/image/slide11.jpg"
+import slide12 from "../../../assets/image/slide12.jpg"
+import slide13 from "../../../assets/image/slide13.jpg"
+import slide14 from "../../../assets/image/slide14.jpg"
+import slide15 from "../../../assets/image/slide15.jpg"
+import slide16 from "../../../assets/image/slide16.jpg"
 
 const sliderImg = [
-  "https://tix.vn/app/assets/img/icons/slide/slide16.jpg",
-  "https://tix.vn/app/assets/img/icons/slide/slide1.jpg",
-  "https://tix.vn/app/assets/img/icons/slide/slide2.jpg",
-  "https://tix.vn/app/assets/img/icons/slide/slide3.jpg",
-  "https://tix.vn/app/assets/img/icons/slide/slide4.jpg"
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
+  slide6,
+  slide7,
+  slide8,
+  slide9,
+  slide10,
+  slide11,
+  slide12,
+  slide13,
+  slide14,
+  slide15,
+  slide16,
 ]
 export default function Apps() {
   const settings = {
@@ -40,8 +67,8 @@ export default function Apps() {
           <div className="col-lg-6 col-12 app_img">
             <img
               className="img-res"
-              src="https://tix.vn/app/assets/img/icons/mobile.png"
-              alt="true"
+              src={mobile}
+              alt="mobile"
             />
             <div className="owl-app">
               <Slider {...settings}>

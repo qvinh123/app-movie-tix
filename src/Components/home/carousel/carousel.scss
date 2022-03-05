@@ -16,13 +16,13 @@
     .slick-prev {
       left: 15px;
       top: 45%;
-      background-image: url("https://tix.vn/app/assets/img/icons/back-session.png");
+      background-image: url("../../../assets/image/back-session.png");
   
     }
     .slick-next {
       right: 15px;
       top: 45%;
-      background-image: url("https://tix.vn/app/assets/img/icons/next-session.png");
+      background-image: url("../../../assets/image/next-session.png");
     }
   }
   .item {
@@ -129,6 +129,13 @@
         padding: $pd-0 $pd-4;
         @include text($color-white, $fs-2, $fw-2);
         border: none;
+      }
+
+      .dropdown-item{
+        cursor: pointer;
+        &:active{
+          background-color:transparent
+        }
       }
     }
   }

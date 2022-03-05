@@ -13,6 +13,10 @@ import { makeStyles } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 import ModalMessage from "./modalMessage"
 import Loading from "../../Components/loading";
+import screen from "../../assets/image/screen.png"
+import avatar from "../../assets/image/avatar.png"
+import notification from "../../assets/image/Post-notification.png"
+import exclamation from "../../assets/image/3b044b88f751ba77406f7ebc15090514.png"
 
 const useStyle = makeStyles(() => {
   return {
@@ -55,7 +59,7 @@ export default function Booking() {
       setFlag(false)
       Swal.fire({
         text: 'Bạn không thể bỏ trống 1 ghế ở giữa',
-        imageUrl: "https://tix.vn/app/assets/img/Post-notification.png",
+        imageUrl: `${notification}`,
         imageWidth: 80,
         confirmButtonText: 'OK',
       })
@@ -173,7 +177,7 @@ export default function Booking() {
             <div className="info-account d-flex align-items-center">
               <NavLink to="/">
                 <img
-                  src="https://tix.vn/app/assets/img/avatar.png"
+                  src={avatar}
                   alt="account"
                 />
               </NavLink>
@@ -188,14 +192,6 @@ export default function Booking() {
           <div id="seatv2">
             <div className="topContent">
               <div className="lefttitle">
-                <div className="logocinema">
-                  <img
-                    className="logo"
-                    src="https://s3img.vcdn.vn/123phim/2018/09/f32670fd0eb083c9c4c804f0f3a252ed.png"
-                    alt="true"
-                  />
-                </div>
-
                 <div className="contentcinema">
                   <p className="address">
                     <span className="pcinema">{infoTicket.tenCumRap}</span>
@@ -222,8 +218,8 @@ export default function Booking() {
                     <div className="namescreen">
                       <img
                         className="logo"
-                        src="https://tix.vn/app/assets/img/icons/screen.png"
-                        alt=""
+                        src={screen}
+                        alt="screen"
                       />
                     </div>
                   </div>
@@ -325,7 +321,7 @@ export default function Booking() {
             </div>
 
             <div className="booking_notice">
-              <img src="https://tix.vn/app/assets/img/icons/exclamation.png" alt="" />
+              <img src={exclamation} alt="exclamation" />
               <span className="notice__title">Vé đã mua không thể đổi hoặc hoàn tiền <br /></span>
               <span className="notice__title">Mã vé sẽ được gửi qua tin nhắn<span> SMS </span>(tin nhắn Zalo) và<span> Email </span>đã đăng nhập</span>
             </div>

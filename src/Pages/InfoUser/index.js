@@ -6,6 +6,7 @@ import HistoryBooking from './historyBooking';
 import { mainService } from "../../service"
 import Swal from 'sweetalert2'
 import Loading from '../../Components/loading';
+import avatarDefault from "../../assets/image/avatar.png"
 
 export default function InfoUser() {
     const user = JSON.parse(localStorage.getItem("userLogin"))
@@ -50,7 +51,7 @@ export default function InfoUser() {
                         <div className="avatar_name_user">
                             <input type="file" id="img" onChange={handleOnChange} />
                             <label className="uploadfile" htmlFor="img"><i className="fas fa-upload"></i></label>
-                            <img className="avatar" src={avatarImg || "https://tix.vn/app/assets/img/avatar.png"} alt="" />
+                            <img className="avatar" src={avatarImg ||avatarDefault} alt="" />
                             <img className="avatar avatar_show" src={avatar.file} alt="" />
                         </div>
                         <ul className="nav nav-pills">

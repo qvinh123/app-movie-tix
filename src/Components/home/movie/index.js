@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,52 +7,59 @@ import {
 } from "../../../Redux/action/mainAction/movie.action";
 import { NavLink } from "react-router-dom";
 import ModalVideo from "react-modal-video";
+import play from "../../../assets/image/play-video.png"
+import star1 from "../../../assets/image/star1.png"
+import star1d2 from "../../../assets/image/star1.2.png"
+
+const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  rows: 2,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        rows: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        rows: 2,
+      },
+    },
+  ],
+};
 
 export default function Movie() {
   const dispatch = useDispatch();
   const [isOpen, setOpen] = useState(false);
   const [trailer, setTrailer] = useState("");
+
   useEffect(() => {
     dispatch(getMovieListAction());
     dispatch(getMovieList2Action());
   }, []);
-  const state = useSelector((state) => state.movieReducer.movieList);
-  const state2 = useSelector((state) => state.movieReducer.movieList2);
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    rows: 2,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          infinite: true,
-          speed: 500,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          rows: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          infinite: true,
-          speed: 500,
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          rows: 2,
-        },
-      },
-    ],
-  };
+
+  const { movieList } = useSelector((state) => state.movieReducer);
+  const { movieList2 } = useSelector((state) => state.movieReducer);
 
   const youtube_parser = (url = " ") => {
     var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     var match = url.match(regExp);
     return match && match[7].length === 11 ? match[7] : false;
-  };
+  }
+
 
   return (
     <>
@@ -79,12 +84,12 @@ export default function Movie() {
                   href="#dangchieu"
                 >
                   Đang Chiếu
-              </a>
+                </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" data-toggle="pill" href="#sapchieu">
                   Sắp Chiếu
-              </a>
+                </a>
               </li>
             </ul>
           </div>
@@ -92,11 +97,11 @@ export default function Movie() {
             <div className="tab-content">
               <div id="dangchieu" className="tab-pane active">
                 <Slider {...settings}>
-                  {state?.map((movie, index) => {
+                  {movieList?.map((movie, index) => {
                     return (
                       <div key={index} className="film col-12" >
                         <div className="film_img">
-                          <a>
+                          <a href="#!">
                             <img
                               src={movie.hinhAnh}
                               alt="film1"
@@ -106,12 +111,12 @@ export default function Movie() {
                             <div className="bg-overlay"></div>
                           </NavLink>
                           <div className="play">
-                            <a onClick={() => {
+                            <a href="#!" onClick={() => {
                               setOpen(true)
                               setTrailer(movie.trailer)
                             }}>
                               <img
-                                src="http://tix.vn/app/assets/img/icons/play-video.png"
+                                src={play}
                                 alt="video1"
                               />
                             </a>
@@ -120,11 +125,19 @@ export default function Movie() {
                           <div className="review">
                             <p>{movie.danhGia}</p>
                             <div className="star">
-                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
-                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
-                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
-                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
-                              <div><img src="http://tix.vn/app/assets/img/icons/star1.2.png" alt="true" /></div>
+                              {
+                                Number.isInteger(movie.danhGia / 2) && movie.danhGia / 2 > 0 ?
+                                  Array.from(Array(movie.danhGia / 2), (_, i) => (
+                                    <div key={i}><img src={star1} alt={i} /></div>
+                                  )) :
+                                  Array.from(Array(Math.floor(movie.danhGia / 2)), (_, i) => (
+                                    <div key={i}><img src={star1} alt={i} /></div>
+                                  ))
+                              }
+                              {
+                                !(Number.isInteger(movie.danhGia / 2) && movie.danhGia > 0) ? <div><img src={star1d2} alt="true" /></div> : ""
+                              }
+
                             </div>
                           </div>
                         </div>
@@ -150,12 +163,12 @@ export default function Movie() {
               </div>
               <div id="sapchieu" className="tab-pane fade">
                 <Slider {...settings}>
-                  {state2?.map((movie, index) => {
+                  {movieList2?.map((movie, index) => {
                     return (
 
                       <div key={index} className="film col-lg-12 col-12">
                         <div className="film_img">
-                          <a>
+                          <a href="#!">
                             <img
                               src={movie.hinhAnh}
                               alt="film1"
@@ -168,12 +181,13 @@ export default function Movie() {
 
                           <div className="play">
                             <a
+                              href="#!"
                               onClick={() => {
                                 setOpen(true)
                               }}
                             >
                               <img
-                                src="http://tix.vn/app/assets/img/icons/play-video.png"
+                                src={play}
                                 alt="video1"
                               />
                             </a>
@@ -183,11 +197,11 @@ export default function Movie() {
                           <div className="review">
                             <p>{movie.danhGia}</p>
                             <div className="star">
-                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
-                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
-                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
-                              <div><img src="http://tix.vn/app/assets/img/icons/star1.png" alt="true" /></div>
-                              <div><img src="http://tix.vn/app/assets/img/icons/star1.2.png" alt="true" /></div>
+                              <div><img src={star1} alt="true" /></div>
+                              <div><img src={star1} alt="true" /></div>
+                              <div><img src={star1} alt="true" /></div>
+                              <div><img src={star1} alt="true" /></div>
+                              <div><img src={star1d2} alt="true" /></div>
                             </div>
                           </div>
                         </div>

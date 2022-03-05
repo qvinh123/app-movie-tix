@@ -1,8 +1,3 @@
-/* eslint-disable no-mixed-operators */
-/* eslint-disable array-callback-return */
-/* eslint-disable eqeqeq */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useParams } from "react-router-dom";
@@ -14,7 +9,8 @@ import Swal from 'sweetalert2'
 import StarRatings from 'react-star-ratings';
 import { comment } from "../../Redux/action/mainAction/infoUser.action"
 import { mainService } from "../../service"
-
+import avatar from "../../assets/image/avatar.png"
+import star from "../../assets/image/star1.png"
 
 export default function DetailCinema() {
   const user = useSelector(state => state.signInReducer.userSignIn)
@@ -85,26 +81,26 @@ export default function DetailCinema() {
 
                     {phim.lstLichChieuTheoPhim.map((lich, index) => {
                       return (
-                        user ? <NavLink to={`/booking/${lich.maLichChieu}`}>
-                          <span key={index}>
+                        user ? <NavLink key={index} to={`/booking/${lich.maLichChieu}`}>
+                          <span>
                             {format(
                               "dd-MM-yyy",
                               new Date(lich.ngayChieuGioChieu)
                             )}
                           </span> ~ {format(
-                              "hh:mm",
-                              new Date(lich.ngayChieuGioChieu)
-                            )}
-                        </NavLink> : <NavLink to="/signIn">
-                          <span key={index}>
+                            "hh:mm",
+                            new Date(lich.ngayChieuGioChieu)
+                          )}
+                        </NavLink> : <NavLink key={index} to="/signIn">
+                          <span>
                             {format(
                               "dd-MM-yyy",
                               new Date(lich.ngayChieuGioChieu)
-                            )} 
-                          </span> ~ {format(
-                              "hh:mm",
-                              new Date(lich.ngayChieuGioChieu)
                             )}
+                          </span> ~ {format(
+                            "hh:mm",
+                            new Date(lich.ngayChieuGioChieu)
+                          )}
                         </NavLink>
                       );
                     })}
@@ -166,24 +162,24 @@ export default function DetailCinema() {
                   <div id="starMain" className="star">
                     <img
                       className="smallStar"
-                      src="http://tix.vn/app/assets/img/icons/star1.png"
-                      alt="true"
+                      src={star}
+                      alt="1"
                     />
                     <img
                       className="smallStar"
-                      src="http://tix.vn/app/assets/img/icons/star1.png"
-                      alt="true"
+                      src={star}
+                      alt="2"
                     />
                     <img
                       className="smallStar"
-                      src="http://tix.vn/app/assets/img/icons/star1.png"
-                      alt="true"
+                      src={star}
+                      alt="3"
                     />
                     <img
                       className="half"
-                      src="http://tix.vn/app/assets/img/icons/star1.2.png"
+                      src={star}
                       style={{ width: "20px" }}
-                      alt="true"
+                      alt="4"
                     />
                   </div>
                 </div>
@@ -211,7 +207,7 @@ export default function DetailCinema() {
           <div className="row dadMainInfo">
             <div className="infoReviewer">
               <div className="infoReviewerIcon">
-                <img src={user && avatarImg || "https://tix.vn/app/assets/img/avatar.png"} alt="true" />
+                <img src={(user && avatarImg) || avatar} alt="true" />
               </div>
               <div className="infoReviewerName">
                 <div style={{ fontWeight: 500 }}>{comment.taiKhoan}</div>
@@ -252,17 +248,17 @@ export default function DetailCinema() {
               href="#lichchieu"
             >
               Lịch chiếu
-                </a>
+            </a>
           </li>
           <li className="nav-item">
             <a className="nav-link textCinema" data-toggle="pill" href="#thongtin">
               Thông tin
-                </a>
+            </a>
           </li>
           <li className="nav-item">
             <a className="nav-link textCinema" data-toggle="pill" href="#danhGia">
               Đánh giá
-                </a>
+            </a>
           </li>
         </ul>
         <div className="container-fluid" id="cinemaComplex">
@@ -283,7 +279,7 @@ export default function DetailCinema() {
                   return item.danhSachCumRap.map((item, index) => {
                     if (item.maCumRap == cinemaSystemCode) {
                       return (
-                        <>
+                        <div key={index}>
                           <div className="col-md-6 col-12">
                             <div className="row leftInfoDetail">
                               <p className="contentTitle">Địa điểm</p>
@@ -318,7 +314,7 @@ export default function DetailCinema() {
                               </p>
                             </div>
                           </div>
-                        </>
+                        </div>
                       )
                     }
                   })
@@ -334,7 +330,7 @@ export default function DetailCinema() {
                   })} className="col-sm-12 col-xs-12 dadInputReviewer newDesign" data-toggle="modal" data-target={user && "#modalCommnent"}>
                     <span className="imgReviewer">
                       <img
-                        src={user && avatarImg || "https://tix.vn/app/assets/img/avatar.png"}
+                        src={(user && avatarImg) || avatar}
                         alt="true"
                       />
                     </span>
@@ -345,8 +341,24 @@ export default function DetailCinema() {
                     />
                     <span className="imgreviewerstar">
                       <img
-                        src="https://tix.vn/app/assets/img/icons/listStar.png"
-                        alt="true"
+                        src={star}
+                        alt="1"
+                      />
+                        <img
+                        src={star}
+                        alt="2"
+                      />
+                        <img
+                        src={star}
+                        alt="3"
+                      />
+                        <img
+                        src={star}
+                        alt="4"
+                      />
+                        <img
+                        src={star}
+                        alt="5"
                       />
                     </span>
                   </div>
@@ -358,6 +370,7 @@ export default function DetailCinema() {
                 <div className="btn_showMore">
                   <button type="button" onClick={() => showMoreButton()} className="btn">Xem thêm</button>
                 </div>
+
               </div>
             </div>
           </div>

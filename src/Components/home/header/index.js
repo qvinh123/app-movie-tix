@@ -1,9 +1,9 @@
-/* eslint-disable eqeqeq */
-/* eslint-disable no-mixed-operators */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import avatar from "../../../assets/image/avatar.png"
+import logo from "../../../assets/image/web-logo.png"
+import location from "../../../assets/image/location-header.png"
 
 export default function Header() {
   const user = useSelector((state) => state.signInReducer.userSignIn);
@@ -33,7 +33,7 @@ export default function Header() {
       <nav className="navbar navbar-expand-md">
         <NavLink exact to="/">
           <img className="navbar-brand"
-            src="https://tix.vn/app/assets/img/icons/web-logo.png"
+            src={logo}
             alt="logo"
           />
         </NavLink>
@@ -48,7 +48,7 @@ export default function Header() {
               {user ? (
                 <NavLink to="/infoUser">
                   <img
-                    src={user && avatarImg || "https://tix.vn/app/assets/img/avatar.png"}
+                    src={user && (avatarImg || avatar)}
                     alt="account"
                   />
                   <span>{user?.taiKhoan}</span>
@@ -56,7 +56,7 @@ export default function Header() {
               ) : (
                 <NavLink to="/signIn">
                   <img
-                    src="https://tix.vn/app/assets/img/avatar.png"
+                    src={avatar}
                     alt="account"
                   />
                   <span>Đăng nhập</span>
@@ -105,7 +105,7 @@ export default function Header() {
           </ul>
           <div className="navbar_info-location d-flex align-items-center order-3">
             <img
-              src="https://tix.vn/app/assets/img/icons/location-header.png"
+              src={location}
               alt="location"
             />
             <div className="dropdown">

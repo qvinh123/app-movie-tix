@@ -1,7 +1,3 @@
-/* eslint-disable no-mixed-operators */
-/* eslint-disable eqeqeq */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from "react";
 import {
   getMovieDetailAction,
@@ -22,6 +18,10 @@ import StarRatings from 'react-star-ratings';
 import { mainService } from "../../service";
 import Swal from 'sweetalert2'
 import { youtube_parser } from "../../validation"
+import star1d2 from "../../assets/image/star1.2.png"
+import star1 from "../../assets/image/star1.png"
+import avatar from "../../assets/image/avatar.png"
+import play from "../../assets/image/play-video.png"
 
 export default function Detail() {
   const avatarImg = JSON.parse(localStorage.getItem("avatarImg"))
@@ -110,8 +110,8 @@ export default function Detail() {
                       const { ngayChieuGioChieu, maLichChieu } = lichChieu;
                       if (user) {
                         return (
-                          <NavLink to={`/booking/${maLichChieu}`}>
-                            <span key={index}>
+                          <NavLink key={index} to={`/booking/${maLichChieu}`}>
+                            <span>
                               {format(
                                 "dd-MM-yyy",
                                 new Date(ngayChieuGioChieu)
@@ -124,8 +124,8 @@ export default function Detail() {
                         );
                       } else {
                         return (
-                          <NavLink to={`/signIn`}>
-                          <span key={index}>
+                          <NavLink key={index} to={`/signIn`}>
+                            <span>
                               {format(
                                 "dd-MM-yyy",
                                 new Date(ngayChieuGioChieu)
@@ -171,39 +171,42 @@ export default function Detail() {
 
 
   const renderListComment = () => {
-    return listComment?.reverse().filter(comment => comment.maPhim == maPhim).slice(0, showMore.numberOfitemsShown).map((comment, index) => {
-      return <div key={index} className="reviewerContain detailMainStyle ">
-        <div className="dadCommentReviewer">
-          <div className="row dadMainInfo">
-            <div className="infoReviewer">
-              <div className="infoReviewerIcon">
-                <img src={user && avatarImg || "https://tix.vn/app/assets/img/avatar.png"} alt="true" />
+    return listComment?.reverse()
+      .filter(comment => comment.maPhim == maPhim)
+      .slice(0, showMore.numberOfitemsShown)
+      .map((comment, index) => {
+        return <div key={index} className="reviewerContain detailMainStyle ">
+          <div className="dadCommentReviewer">
+            <div className="row dadMainInfo">
+              <div className="infoReviewer">
+                <div className="infoReviewerIcon">
+                  <img src={(user && avatarImg) || avatar} alt="avatar" />
+                </div>
+                <div className="infoReviewerName">
+                  <div style={{ fontWeight: 500 }}>{comment.taiKhoan}</div>
+                  <p className="infoReviewerTime ">{formatDate(new Date(comment.ngayBinhLuan))}</p>
+                </div>
               </div>
-              <div className="infoReviewerName">
-                <div style={{ fontWeight: 500 }}>{comment.taiKhoan}</div>
-                <p className="infoReviewerTime ">{formatDate(new Date(comment.ngayBinhLuan))}</p>
+              <div className="infoStar">
+                <div className="core">
+                  <p className="mb-0">{comment.rating * 2}</p>
+                </div>
+                <div className="row star justify-content-center">
+                  <StarRatings
+                    starEmptyColor="#fb4226"
+                    numberOfStars={comment.rating}
+                    starDimension="10px"
+                    starSpacing="0"
+                  />
+                </div>
               </div>
             </div>
-            <div className="infoStar">
-              <div className="core">
-                <p className="mb-0">{comment.rating * 2}</p>
-              </div>
-              <div className="row star justify-content-center">
-                <StarRatings
-                  starEmptyColor="#fb4226"
-                  numberOfStars={comment.rating}
-                  starDimension="10px"
-                  starSpacing="0"
-                />
-              </div>
+            <div className="row dadMainComment">
+              <div className="more mainComment">{comment.comment}</div>
             </div>
-          </div>
-          <div className="row dadMainComment">
-            <div className="more mainComment">{comment.comment}</div>
           </div>
         </div>
-      </div>
-    })
+      })
   }
 
   if (loading) {
@@ -243,8 +246,8 @@ export default function Detail() {
                 }}
               >
                 <img
-                  src="http://tix.vn/app/assets/img/icons/play-video.png"
-                  alt=""
+                  src={play}
+                  alt="play"
                 />
               </button>
             </div>
@@ -267,7 +270,7 @@ export default function Detail() {
             <div>
               <span className="detailMainInfo1 ng-binding">
                 100 phút - 0 IMDb - 2D/Digital
-                </span>
+              </span>
               <br />
             </div>
             {movieDetail.maNhom == "GP11" ? (
@@ -289,27 +292,18 @@ export default function Detail() {
               </div>
             </div>
             <div id="starMain" className="star">
-              <img
-                className="smallStar"
-                src="http://tix.vn/app/assets/img/icons/star1.png"
-                alt="true"
-              />
-              <img
-                className="smallStar"
-                src="http://tix.vn/app/assets/img/icons/star1.png"
-                alt="true"
-              />
-              <img
-                className="smallStar"
-                src="http://tix.vn/app/assets/img/icons/star1.png"
-                alt=""
-              />
-              <img
-                className="half"
-                src="http://tix.vn/app/assets/img/icons/star1.2.png"
-                style={{ width: "20px" }}
-                alt="true"
-              />
+              {
+                Number.isInteger(movieDetail.danhGia / 2) && movieDetail.danhGia / 2 > 0 ?
+                  Array.from(Array(movieDetail.danhGia / 2), (_, i) => (
+                    <img key={i} src={star1} alt={i} />
+                  )) :
+                  Array.from(Array(Math.floor(movieDetail.danhGia / 2)), (_, i) => (
+                    <img key={i} src={star1} alt={i} />
+                  ))
+              }
+              {
+                !(Number.isInteger(movieDetail.danhGia / 2) && movieDetail.danhGia > 0) ? <div><img src={star1d2} alt="true" /></div> : ""
+              }
             </div>
           </div>
         </div>
@@ -327,17 +321,17 @@ export default function Detail() {
                 href="#lichchieu"
               >
                 Lịch chiếu
-                </a>
+              </a>
             </li>
             <li className="nav-item">
               <a className="nav-link textMovie" data-toggle="pill" href="#thongtin">
                 Thông tin
-                </a>
+              </a>
             </li>
             <li className="nav-item">
               <a className="nav-link textMovie" data-toggle="pill" href="#danhGia">
                 Đánh giá
-                </a>
+              </a>
             </li>
           </ul>
 
@@ -423,8 +417,8 @@ export default function Detail() {
                     })} className="col-sm-12 col-xs-12 dadInputReviewer newDesign" data-toggle="modal" data-target={user && "#modalCommnent"}>
                       <span className="imgReviewer">
                         <img
-                          src={user && avatarImg || "https://tix.vn/app/assets/img/avatar.png"}
-                          alt="true"
+                          src={(user && avatarImg) || avatar}
+                          alt="avatar"
                         />
                       </span>
                       <input
@@ -434,8 +428,24 @@ export default function Detail() {
                       />
                       <span className="imgreviewerstar">
                         <img
-                          src="https://tix.vn/app/assets/img/icons/listStar.png"
-                          alt="true"
+                          src={star1}
+                          alt="1"
+                        />
+                        <img
+                          src={star1}
+                          alt="2"
+                        />
+                        <img
+                          src={star1}
+                          alt="3"
+                        />
+                        <img
+                          src={star1}
+                          alt="4"
+                        />
+                        <img
+                          src={star1}
+                          alt="5"
                         />
                       </span>
                     </div>

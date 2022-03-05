@@ -1,5 +1,6 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
+import like from "../../../assets/image/like.png"
+import comment from "../../../assets/image/comment.png"
 
 const listNewTop = [
   {
@@ -175,7 +176,7 @@ export default function News() {
             <div key={index} className="col-md-6 col-12">
               <div className="new_item mb-4">
                 <div>
-                  <a href="#">
+                  <a href="#!">
                     <img
                       src={news.hinhAnh}
                       alt="img-news"
@@ -191,15 +192,15 @@ export default function News() {
                 <div className="iconFacebook d-flex">
                   <div className="wrap-icon like">
                     <img
-                      src="https://tix.vn/app/assets/img/icons/like.png"
-                      alt="true"
+                      src={like}
+                      alt="like"
                     />
                     <span>0</span>
                   </div>
                   <div className="wrap-icon comment">
                     <img
-                      src="https://tix.vn/app/assets/img/icons/comment.png"
-                      alt="true"
+                      src={comment}
+                      alt="comment"
                     />
                     <span>0</span>
                   </div>
@@ -220,7 +221,7 @@ export default function News() {
             <div key={index} className="col-md-4 col-12">
               <div className="new_item">
                 <div>
-                  <a href="#">
+                  <a href="#!">
                     <img
                       src={news.hinhAnh}
                       alt="news-img"
@@ -236,15 +237,15 @@ export default function News() {
                 <div className="iconFacebook d-flex">
                   <div className="wrap-icon like">
                     <img
-                      src="https://tix.vn/app/assets/img/icons/like.png"
-                      alt="true"
+                      src={like}
+                      alt="like"
                     />
                     <span>1</span>
                   </div>
                   <div className="wrap-icon comment">
                     <img
-                      src="https://tix.vn/app/assets/img/icons/comment.png"
-                      alt="true"
+                      src={comment}
+                      alt="comment"
                     />
                     <span>0</span>
                   </div>
@@ -263,7 +264,7 @@ export default function News() {
         return item.danhSachTinTuc.map((news, index) => {
           return (
             <li key={index}>
-              <a href="#">
+              <a href="#!">
                 <img
                   src={news.hinhAnh}
                   alt="news-img"

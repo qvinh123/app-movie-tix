@@ -8,6 +8,7 @@ import format from "date-format";
 import { NavLink } from "react-router-dom";
 import ModalVideo from "react-modal-video";
 import { youtube_parser } from "../../../validation"
+import play from "../../../assets/image/play-video.png"
 
 const listCarousel = [
   {
@@ -67,8 +68,8 @@ export default function Carousel() {
           <div className="backgroundLinear"></div>
           <div className="play">
             <img
-              src="http://tix.vn/app/assets/img/icons/play-video.png"
-              alt="true"
+              src={play}
+              alt="play"
               onClick={() => {
                 setOpen(true)
                 setTrailer(carousel.trailer)

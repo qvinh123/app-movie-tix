@@ -2,6 +2,8 @@
 import React from "react";
 import ListUserAdmin from "../../Components/admin/listUserAdmin/index";
 import ListMovieAdmin from "../../Components/admin/listMovieAdmin/index";
+import webLogo from "../../assets/image/web-logo.png"
+
 export default function DashBoard() {
   return (
     <>
@@ -31,9 +33,9 @@ export default function DashBoard() {
               <div className="container-fluid">
                 <a>
                   <img
-                    src="https://tix.vn/app/assets/img/icons/web-logo.png"
+                    src={webLogo}
                     width="50px"
-                    alt="true"
+                    alt="webLogo"
                   />
                 </a>
               </div>
